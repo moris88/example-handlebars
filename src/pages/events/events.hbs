@@ -1,0 +1,233 @@
+{{#extend "index"}}
+{{#content "body"}}
+
+<!-- PAGE EVENTS HTML -->
+<div class="relative">
+    {{> navbarComponent }}
+
+    <!-- TODO: modale successo partecipazione evento!!! -->
+
+    <section class="rounded-b-lg" style="background-image: url('{{primary.image.src}}'); background-repeat: no-repeat;
+      background-position: center center; background-size: cover;">
+        <!-- EVENTO IN PRIMA VISTA-->
+        <div class="flex items-end w-full min-h-[500px] p-10 rounded-b-lg !bg-gradient-to-r from-black to-transparent">
+            <div class="lg:w-1/2 w-full h-full flex flex-col items-start justify-end gap-4 text-white p-10">
+                {{#each primary.tags as |tag|}}
+                {{> chipComponent type="transparent" text=tag}}
+                {{/each}}
+                <h3 class="text-4xl">{{primary.title}}</h3>
+                <p><span class="font-semibold">Piattaforma</span>: {{primary.platform}}</p>
+                <p><span class="font-semibold">Orario</span>: dalle {{primary.startAt}} alle {{primary.endAt}}</p>
+                <p class="font-semibold">{{primary.description}}</p>
+                <div class="flex justify-start items-center gap-5 w-full">
+                    {{#if subscribed}}
+                    {{> buttonComponent anchor="true" className="btn btn-white-transparent"
+                    text="Partecipa ora"
+                    href=link}}
+                    {{else}}
+                    {{> buttonComponent anchor="true" className="btn btn-white-transparent"
+                    text="Iscriviti ora"
+                    href="/participate?id=" endpoint=primary.id}}
+                    {{/if}}
+                    {{> buttonComponent anchor="true" className="btn btn-white" text="Visualizza l'evento"
+                    href=primary.href}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lg:px-20 p-4 !mt-0">
+        <section>
+            <!-- I MIEI EVENTI-->
+            <div class="flex justify-between items-center border-b border-b-black my-12">
+                <span class="text-4xl font-bold py-3">
+                    I miei eventi
+                </span>
+                <span class="flex gap-2 items-center h-full">
+                    <span id="prev-pagination-my" onclick="prevMy(event)">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                        </svg>
+                    </span>
+                    <input id="pagination-my" value="1" type="text" class="hidden" />
+                    <span id="next-pagination-my" onclick="nextMy(event)">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                        </svg>
+                    </span>
+                    <span>
+                        {{> buttonComponent type="secondary" className="btn btn-secondary" text="Vedi tutti" href="/events/my/all" anchor="true" }}
+                    </span>
+                </span>
+            </div>
+            {{#each my as |item|}}
+            {{> cardEventComponent id=item.id name=item.name horizontal="true" tags=item.tags image=item.image date=date
+            title=item.title
+            description=item.description subscribed=item.subscribed href=item.href id=item.id favorite=item.favorite
+            link=item.link}}
+            {{/each}}
+        </section>
+        <section>
+            <!-- EVENTI CONSIGLIATI-->
+            <div class="flex justify-between items-center border-b border-b-black my-10">
+                <span class="text-4xl font-bold py-3">
+                    Eventi consigliati
+                </span>
+                <span class="flex gap-2 items-center h-full">
+                    <span id="prev-pagination-recommended" onclick="prevRecommended(event)">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                        </svg>
+                    </span>
+                    <input id="pagination-racommended" value="1" type="text" class="hidden" />
+                    <span id="next-pagination-reccomended" onclick="nextRecommended(event)">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                        </svg>
+                    </span>
+                    <span>
+                        {{> buttonComponent type="secondary" className="btn btn-secondary" text="Vedi tutti" href="/events/my/recommended" anchor="true"}}
+                    </span>
+                </span>
+            </div>
+            {{#each recommended as |item|}}
+            {{> cardEventComponent id=item.name horizontal="true" tags=item.tags image=item.image date=date
+            title=item.title
+            description=item.description subscribed=item.subscribed href=item.href id=item.id
+            favorite=item.favorite}}
+            {{/each}}
+        </section>
+        <section class="w-full flex flex-col">
+            <!-- TUTTI GLI EVENTI-->
+            <div class="flex justify-start items-center border-b border-b-black mt-12">
+                <span class="text-4xl font-bold py-3">
+                    Tutti gli eventi
+                </span>
+            </div>
+            <div class="w-full h-full flex">
+                <!-- TODO FILTRO FRONTEND DEGLI EVENTI -->
+                <aside class="w-1/4 border-r border-r-black flex flex-col gap-10 py-10">
+                    <!-- FILTRO LATERALE -->
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Destinatari</p>
+                        <div class="flex gap-4 flex-wrap">
+                            <!-- button esempio selezionato -->
+                            {{> buttonComponent className="btn-filter-active"
+                            text="Solo per Alumni/e"
+                            }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Studenti e
+                            Alumni/e" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Aperto a tutti/e"
+                            }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Gruppo XX" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Gruppo YX" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Gruppo YY" }}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Tipologia</p>
+                        <div class="flex gap-4 flex-wrap">
+                            {{> buttonComponent className="btn-filter"
+                            text="Evento online" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Evento in presenza"
+                            }}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Categorie</p>
+                        <div class="flex gap-4 flex-wrap">
+                            {{> buttonComponent className="btn-filter"
+                            text="Conferenza" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Workshop" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Eventi speciali" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Mentoring" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Spettacolo" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Festival" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Formazione" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Sport" }}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Data e orario</p>
+                        <div class="flex gap-4 flex-wrap">
+                            {{!-- TODO calendar component --}}
+                            {{> calendarComponent }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Giornata intera" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Mattina" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Pomeriggio" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Sera" }}
+                        </div>
+                    </div>
+                </aside>
+                <div class="w-3/4 flex flex-col gap-4 py-10">
+                    <div class="flex justify-between items-center text-2xl w-full pl-10 pt-10">
+                        <div>
+                            <span class="text-black font-bold">Eventi</span>
+                            <!-- totale risultati -->
+                            <span class="text-gray-500 ">(53 risultati)</span>
+                        </div>
+                        <div class="flex items-center gap-8">
+                            <!-- PAGINAZIONE -->
+                            <div class="flex items-center gap-2">
+                                <!-- button pagina precedente -->
+                                <button disabled class="text-primary disabled:text-gray-300" type="button">
+                                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'
+                                        stroke-width='1.5' stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                                        <path stroke-linecap='round' stroke-linejoin='round'
+                                            d='M15.75 19.5 8.25 12l7.5-7.5' />
+                                    </svg>
+                                </button>
+                                <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                                    <!-- corrente/totale pagine -->
+                                    <strong class="text-primary whitespace-nowrap">1/10</strong>
+                                </p>
+                                <!-- button pagina successiva -->
+                                <button class="text-primary disabled:text-gray-300" type="button">
+                                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'
+                                        stroke-width='1.5' stroke='currentColor'
+                                        class='w-6 h-6 text-primary cursor-pointer'>
+                                        <path stroke-linecap='round' stroke-linejoin='round'
+                                            d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                                    </svg>
+                                </button>
+                            </div>
+                            {{> buttonComponent anchor="true" href="/events" className="btn btn-secondary" text="Reset filtri"}}
+                        </div>
+                    </div>
+                    <div class="w-full grid 2xl:grid-cols-2 grid-cols-1 gap-10 pl-10 overflow-x-auto">
+                        {{#each all as |item|}}
+                        {{> cardEventComponent tags=item.tags image=item.image date=date title=item.title
+                        description=item.description subscribed=item.subscribed href=item.href id=item.id
+                        favorite=item.favorite}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script />
+{{/content}}
+{{/extend}}

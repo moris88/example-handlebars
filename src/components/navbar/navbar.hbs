@@ -1,0 +1,97 @@
+<!-- COMPONENT NAVBAR HTML -->
+<!-- PER NON SOVRAPPORRE LE NAVBAR DI DRUPAL E DEL SITO METTI TOP-10, --->
+<!-- OPPURE TOP-12 IN SU, IN BASE ALLA DIMENSIONE DELLA NAVBAR SE SEI --->
+<!-- IN ADMIN ALL'INTERNO DI DRUPAL --->
+<!-- ESEMPIO: <header class="navbar top-10"> --->
+<header class="navbar top-0">
+  <div class="w-full flex justify-between items-center gap-4">
+    <a href="{{ logo.href }}" class="img-nav"><img src={{ logo.src }} alt={{ logo.alt }} class="img-nav" /></a>
+    <nav class="hidden xl:flex whitespace-nowrap flex-nowrap">
+      <ul class="items-nav">
+        {{#each navItems as |item|}}
+          {{#if (equal item.name "Directory")}}
+          <li 
+            {{#with item.active }} 
+            class="item-nav-active" 
+            {{else}} 
+            class="item-nav" 
+            {{/with}}
+          >
+            <button class="dropdown-navbar-btn">       
+              {{item.name}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down dropdown-navbar-icon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+              </svg>
+            </button>
+            <ul class="dropdown-navbar-content">
+                <li><a class="dropdown-navbar-element" href="/directory/alumni">Alumni</a></li>
+                <li><a class="dropdown-navbar-element" href="/directory/gruppi">Gruppi</a></li>
+                <li><a class="dropdown-navbar-element" href="/directory/notables">Notables</a></li>
+                {{!-- <li>
+                  <button class="dropdown-navbar-btn dropdown-navbar-element">       
+                    Sottomenu
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down dropdown-navbar-icon turnright" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                  </button>
+                  <ul class="dropdown-navbar-subcontent">
+                      <li><a class="dropdown-navbar-element" href="/elemento1">Elemento 1</a></li>
+                      <li><a class="dropdown-navbar-element" href="/elemento2">Elemento 2</a></li>
+                      <li><a class="dropdown-navbar-element" href="/elemento3">Elemento 3</a></li>
+                  </ul>
+                </li> --}}
+            </ul>
+          </li>
+          {{else}}
+          {{#if (deq item.name "Alumni" "Gruppi" "Notables")}}
+            <li {{#with item.active }} class="relative item-nav-active" {{else}} class="item-nav" {{/with}}>
+            <a class="text-nowrap" href="{{ item.href }}">{{item.name}}</a>
+            </li>
+          {{/if}}
+          {{/if}}
+        {{/each}}
+        <li class="ml-2">
+          {{#if login}}
+          {{> buttonComponent anchor="true" className="btn btn-primary" text=dona.name href=dona.href }}
+          {{else}}
+          {{> buttonComponent anchor="true" className="btn btn-secondary" text=dona.name href=dona.href }}
+          {{/if}}
+        </li>
+      </ul>
+    </nav>
+    {{#if login}}
+    <section>
+      {{> avatarComponent src=profile.avatar.src alt=profile.avatar.alt name=profile.name role=profile.role
+      course=profile.course phone=profile.phone email=profile.email href=profile.href}}
+    </section>
+    {{else}}
+    <section>
+      {{> buttonComponent anchor="true" type="button" className="btn btn-primary" text="Accedi ora" href="/login"}}
+    </section>
+    {{/if}}
+  </div>
+
+  <section class="text-[10px] xl:hidden">
+    <nav class="w-full">
+      <ul class="items-nav">
+        {{#each navItems as |item|}}
+        {{#if (equal item.name "Directory")}}
+        {{else}}
+        <li {{#with item.active }} class="item-nav-active" {{else}} class="item-nav" {{/with}}>
+          <a class="text-nowrap" href="{{ item.href }}">{{item.name}}</a>
+        </li>
+        {{/if}}
+        {{/each}}
+        <li>
+          {{#if login}}
+          {{> buttonComponent anchor="true" className="btn btn-primary" text=dona.name href=dona.href }}
+          {{else}}
+          {{> buttonComponent anchor="true" className="btn btn-secondary" text=dona.name href=dona.href }}
+          {{/if}}
+        </li>
+      </ul>
+    </nav>
+  </section>
+</header>
+
+<script />

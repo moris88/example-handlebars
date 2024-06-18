@@ -1,0 +1,48 @@
+/*AVATARLIST CSS*/
+.avatar-container {
+  @apply flex justify-start items-center whitespace-nowrap relative;
+}
+
+.single-avatar {
+  @apply w-10 h-10 rounded-full border-2 border-primary drop-shadow-lg absolute max-h-10 max-w-10 object-cover;
+}
+
+.single-small-avatar {
+  @apply w-8 h-8 rounded-full border-2 border-white drop-shadow-lg absolute max-h-8 max-w-8 object-cover;
+}
+
+.single-avatar:nth-child(2) {
+  left: 22px; /* Distanza dal primo avatar */
+  z-index: 2;
+}
+
+.single-avatar:nth-child(3) {
+  left: 44px; /* Distanza dal primo avatar */
+  z-index: 3;
+}
+.single-avatar:nth-child(4) {
+  left: 66px; /* Distanza dal primo avatar */
+  z-index: 4;
+}
+.single-avatar:nth-child(5) {
+  left: 88px; /* Distanza dal primo avatar */
+  z-index: 5;
+}
+
+.single-small-avatar:nth-child(2) {
+  left: 20px; /* Distanza dal primo avatar */
+  z-index: 2;
+}
+
+.single-small-avatar:nth-child(3) {
+  left: 40px; /* Distanza dal primo avatar */
+  z-index: 3;
+}
+.single-small-avatar:nth-child(4) {
+  left: 60px; /* Distanza dal primo avatar */
+  z-index: 4;
+}
+.single-small-avatar:nth-child(5) {
+  left: 80px; /* Distanza dal primo avatar */
+  z-index: 5;
+}

@@ -1,0 +1,102 @@
+<!-- COMPONENT CARDALUMNO HTML -->
+<button
+  type="button"
+  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+  data-hs-overlay="#alumno-backdrop-modal"
+  onclick="openModal()"
+>
+  <div
+    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+  >
+    {{#if alumno.notable}}
+      <div
+        class="absolute top-5 right-5 flex gap-2 items-center bg-yellow-50 text-orange-600 border border-orange-600 px-3 py-1 rounded-full"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-star text-orange-600"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+          />
+        </svg>
+        Notable
+      </div>
+    {{/if}}
+    <img
+      src="{{alumno.image.src}}"
+      alt="{{alumno.image.alt}}"
+      class="w-full h-64 rounded-t-lg object-cover object-top"
+    />
+  </div>
+  <div class="p-4">
+    <p
+      class="text-primary font-bold text-xl text-left"
+    >{{alumno.name}}</p>
+    {{#if alumno.notable}}
+      <p class="font-base text-base text-left">Laureato nel
+        {{alumno.year_of_graduated}}
+        &#183;
+        {{alumno.profession}}</p>
+    {{else}}
+      <p class="font-base text-base text-left">{{alumno.info.startDateYear}}</p>
+    {{/if}}
+    <div class="flex flex-col gap-1 mt-4">
+      <div class="flex items-center gap-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-6 h-6 text-primary"
+        >
+          <path
+            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+          />
+          <path
+            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+          />
+          <path
+            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+          />
+        </svg>
+        <p class="text-left">{{alumno.info.graduated}}</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-6 h-6 text-primary"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <p class="text-left">{{alumno.info.department}}</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-house-door-fill text-primary w-6 h-6"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+          />
+        </svg>
+        <p>Vive a {{alumno.address.city}}</p>
+      </div>
+    </div>
+  </div>
+</button>
+
+<script />

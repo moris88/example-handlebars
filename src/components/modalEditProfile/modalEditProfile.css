@@ -1,0 +1,28 @@
+/*MODALEDITPROFILE CSS*/
+.modal-edit {
+  @apply fixed right-0 inset-0 grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm;
+}
+.modal-edit-deactive {
+  @apply hidden;
+}
+.modal-edit-active {
+  @apply block z-[100];
+}
+.show-modal-edit {
+  @apply md:w-full w-auto h-auto z-50 opacity-100;
+}
+.textarea-profile {
+  @apply rounded-2xl border border-solid border-gray-300 text-black p-3 outline-none w-full hover:border-primary;
+
+}
+.input-profile {
+  @apply rounded-2xl border border-solid border-gray-300 text-black p-3 outline-none w-full hover:border-primary;
+}
+
+.multiautocomplete-profile {
+  @apply rounded-2xl bg-white px-3 py-4 relative w-auto border hover:border-primary outline-1 outline-primary border-solid border-gray-300;
+}
+
+.multiautocomplete-element-profile {
+  @apply flex gap-2 rounded-2xl items-center bg-white border border-primary !text-primary p-2 cursor-pointer;
+}

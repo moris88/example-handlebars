@@ -1,0 +1,46 @@
+{
+  "name": "unitrento-frontend",
+  "version": "1.0.0",
+  "description": "unitrento frontend project",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint",
+    "component": "node commands.js component",
+    "page": "node commands.js page",
+    "dev": "node configuration.local.mjs",
+    "build": "node configuration.build.mjs",
+    "build:css": "npx tailwindcss -i ./src/global.css -o ./public/style.css",
+    "build:handlebars": "node src/index.js"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "handlebars",
+    "tailwindcss",
+    "express"
+  ],
+  "author": {
+    "name": "Maurizio Tolomeo",
+    "email": "maurizio.tolome@crmpartners.it",
+    "url": "https://www.crmpartners.it/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "ansi-colors": "^4.1.3",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.21.4",
+    "eslint": "^9.3.0",
+    "express": "^4.19.2",
+    "globals": "^15.3.0",
+    "handlebars": "^4.7.8",
+    "handlebars-layouts": "^3.1.4",
+    "nodemon": "^3.1.1",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.3",
+    "yargs": "^17.7.2"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+}

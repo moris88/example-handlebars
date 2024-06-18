@@ -1,0 +1,67 @@
+/*NAVBAR CSS*/
+
+.navbar {
+    @apply sticky z-50 bg-white border-b border-b-gray-100 2xl:px-20 xl:px-10 lg:px-20 px-10 md:py-6 p-2 shadow flex flex-col;
+}
+
+.items-nav {
+    @apply flex items-center justify-start lg:justify-center lg:gap-2 xl:gap-1 2xl:gap-2 gap-2 !min-h-12 text-nowrap overflow-x-auto overflow-y-hidden w-full;
+}
+
+.item-nav {
+    @apply text-base font-medium hover:text-primary cursor-pointer py-2 px-4;
+}
+
+.item-nav-active {
+    @apply border-b border-b-primary text-primary text-base font-medium py-2 px-4;
+}
+
+.img-nav {
+    @apply w-52 min-w-52;
+}
+
+/* Stile per il pulsante del dropdown */
+.dropdown-navbar-btn {
+  @apply cursor-pointer w-full flex justify-between items-center gap-2 text-nowrap;
+}
+
+/* Stile per il contenitore del dropdown */
+.dropdown-navbar-content {
+  @apply transition-all duration-500 bg-white absolute top-20 rounded-lg shadow-lg !text-black w-auto flex flex-col gap-2 h-0 -z-50 opacity-0 p-2 invisible;
+}
+
+.dropdown-navbar-content li {
+  @apply w-full py-2 px-4 hover:bg-gray-100 rounded-lg text-gray-700;
+}
+
+.dropdown-navbar-content.show {
+  @apply h-auto z-[100] opacity-100 visible;
+}
+
+.dropdown-navbar-subcontent {
+  @apply transition-all duration-500 bg-white absolute top-20 rounded-lg shadow-lg !text-black w-auto flex flex-col gap-2 h-0 -z-50 opacity-0 p-2;
+}
+
+.dropdown-navbar-subcontent.show {
+  @apply h-auto z-[100] opacity-100 left-24;
+}
+
+.dropdown-navbar-icon {
+  @apply w-4 h-4 drop-shadow-lg transition-transform duration-500;
+}
+
+.dropdown-navbar-icon.turntop {
+  @apply transform rotate-180;
+}
+
+.dropdown-navbar-icon.turnbottom {
+  @apply transform rotate-0;
+}
+
+.dropdown-navbar-icon.turnright {
+  @apply transform -rotate-90;
+}
+
+.dropdown-navbar-element {
+  @apply flex w-full h-full gap-1 cursor-pointer;
+}

@@ -1,0 +1,190 @@
+{{#extend "index"}}
+{{#content "body"}}
+
+<!-- PAGE NEWS HTML -->
+<div class="relative">
+    {{> navbarComponent }}
+
+    <!-- TODO: modale news salvata!!! -->
+    
+    <div class="flex w-full h-auto flex-col justify-start items-start lg:px-20 p-4 !mt-0">
+        <section class="w-full flex flex-col justify-center items-center py-20 gap-4">
+            <h1 class="font-bold text-4xl text-center">News di UniTrento Alumni</h1>
+            <p class="font-normal text-xl text-center">Articoli, consigli ed inviti dedicati agli Alumni e non solo!</p>
+        </section>
+        <section class="w-full">
+            <div class="flex items-center border-b border-b-black mb-10">
+                <span class="text-4xl font-bold py-3">
+                    News in evidenza
+                </span>
+            </div>
+            <div class="flex flex-col xl:flex-row items-stretch gap-12 h-full">
+                {{> cardNewsComponent id=evidence_primary.id tags=evidence_primary.tags image=evidence_primary.image date=evidence_primary.date time=evidence_primary.time title=evidence_primary.title description=evidence_primary.description subscribed=evidence_primary.subscribed href=evidence_primary.href id=evidence_primary.id favorite=evidence_primary.favorite author=evidence_primary.author lecture_time=evidence_primary.lecture_time}}
+                <div class="flex flex-col gap-12">
+                    {{#each evidence as |item|}}
+                        {{> cardNewsComponent id=item.name horizontal="true" tags=item.tags image=item.image date=date title=item.title
+                        description=item.description subscribed=item.subscribed href=item.href id=item.id favorite=item.favorite author=item.author lecture_time=item.lecture_time time=evidence_primary.time}}
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+        <section class="w-full">
+            <div class="flex items-center border-b border-b-black my-10">
+                <span class="text-4xl font-bold py-3">
+                    News consigliate per te
+                </span>
+            </div>
+            <div class="flex flex-col xl:flex-row gap-6 overflow-x-auto">
+                {{#each recommended as |item|}}
+                {{> cardNewsComponent id=item.name vertical="true" tags=item.tags image=item.image date=date title=item.title
+                description=item.description subscribed=item.subscribed href=item.href id=item.id
+                favorite=item.favorite author=item.author lecture_time=item.lecture_time time=evidence_primary.time}}
+                {{/each}}
+            </div>
+        </section>
+        <section class="w-full my-20">
+            <div class="w-full p-10 flex flex-col lg:flex-row justify-between items-end border border-primary rounded-2xl bg-red-50">
+                <div class="flex flex-col gap-6 items-start w-full">
+                    <p class="text-primary text-4xl font-bold">Entra a far parte del nostro programma di mentoring per Alumni e Alumnae!</p>
+                    <p class="text-xl font-medium">Unisciti a una rete di connessioni, condividi esperienze e ispira le future generazioni.
+                    <a class="hover:underline" href="/">Clicca qui</a> per saperne di più e diventa mentore oggi stesso!</p>
+                </div>
+                {{> buttonComponent anchor="true" href="/mentoring-program" next="true" className="flex items-center gap-2 btn btn-primary" text="Scopri di più"}}
+            </div>
+        </section>
+        <section class="w-full flex flex-col">
+            <!-- TUTTE LE NEWS-->
+            <div class="flex justify-start items-center border-b border-b-black">
+                <span class="text-4xl font-bold py-3">
+                    Ultime news
+                </span>
+            </div>
+            <div class="w-full h-full flex">
+                <!-- TODO FILTRO FRONTEND DELLE NEWS -->
+                <aside class="w-1/4 border-r border-r-black flex flex-col gap-10 py-10">
+                    <!-- FILTRO LATERALE -->
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Destinatari</p>
+                        <div class="flex gap-4 flex-wrap">
+                            <!-- button esempio selezionato -->
+                            {{> buttonComponent className="btn-filter-active"
+                            text="Solo per Alumni/e"
+                            }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Studenti e
+                            Alumni/e" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Aperto a tutti/e"
+                            }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Gruppo XX" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Gruppo YX" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Gruppo YY" }}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Tipologia</p>
+                        <div class="flex gap-4 flex-wrap">
+                            {{> buttonComponent className="btn-filter"
+                            text="Evento online" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Evento in presenza"
+                            }}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Categorie</p>
+                        <div class="flex gap-4 flex-wrap">
+                            {{> buttonComponent className="btn-filter"
+                            text="Conferenza" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Workshop" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Eventi speciali" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Mentoring" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Spettacolo" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Festival" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Formazione" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Sport" }}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-2xl font-bold">Settore e argomenti</p>
+                        <div class="flex gap-4 flex-wrap">
+                            {{> buttonComponent className="btn-filter"
+                            text="Tecnico - Scientifico" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Economico - Giuridico" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Scienze politiche" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Scienze sociali" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Psicologica - Scienze cognitive" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Area umanistica" }}
+                            {{> buttonComponent className="btn-filter"
+                            text="Artistico - Progettuale" }}
+                        </div>
+                    </div>
+                </aside>
+                <div class="w-3/4 flex flex-col gap-4 py-10">
+                    <div class="flex justify-between items-center text-2xl w-full pl-10 pt-10">
+                        <div>
+                            <span class="text-black font-bold">News</span> 
+                            <!-- totale risultati -->
+                            <span class="text-gray-500 ">(53 risultati)</span>
+                        </div>
+                        <div class="flex items-center gap-8">
+                            <!-- PAGINAZIONE -->
+                            <div class="flex items-center gap-2">
+                                <!-- button pagina precedente -->
+                                <button
+                                    disabled
+                                    class="text-primary disabled:text-gray-300"
+                                    type="button">
+                                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                                    stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                                        <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                                    </svg>
+                                </button>
+                                <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                                    <!-- corrente/totale pagine -->
+                                    <strong class="text-primary whitespace-nowrap">1/10</strong>
+                                </p>
+                                <!-- button pagina successiva -->
+                                <button
+                                    class="text-primary disabled:text-gray-300"
+                                    type="button">
+                                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                                        stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                                        <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                                    </svg>
+                                </button>
+                            </div>
+                            {{> buttonComponent anchor="true" href="/events" className="btn btn-secondary" text="Reset filtri"}}
+                        </div>
+                    </div>
+                    <div class="w-full grid 2xl:grid-cols-2 grid-cols-1 gap-10 pl-10 overflow-x-auto">
+                        {{#each all as |item|}}
+                        {{> cardNewsComponent vertical="true" tags=item.tags image=item.image date=date title=item.title
+                        description=item.description subscribed=item.subscribed href=item.href id=item.id
+                        favorite=item.favorite author=item.author lecture_time=item.lecture_time time=evidence_primary.time}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script />
+{{/content}}
+{{/extend}}

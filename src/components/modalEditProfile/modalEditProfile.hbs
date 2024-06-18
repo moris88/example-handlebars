@@ -1,0 +1,71 @@
+<!-- COMPONENT MODALEDITPROFILE HTML -->
+
+<div id="backdrop-modal" class="modal-edit modal-edit-deactive">
+    <div class="w-full h-full flex justify-center items-center">
+        <form onsubmit="sendUpdate(event)" id="content-modal" class="w-auto h-auto max-w-screen max-h-screen lg:max-h-[95%] lg:max-w-[35%] bg-white rounded-lg shadow-lg flex flex-col gap-6 opacity-0 relative overflow-y-hidden">
+            <div class="sticky top-0 w-full flex justify-between items-center border-b border-b-black p-6 bg-white">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="font-bold text-xl">Modifica Profilo</p>
+                </div>
+                <button class="flex gap-2 items-center"
+                onclick="closeEditProfile()" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col gap-4 px-6 max-h-96 overflow-y-auto">
+                <p class="text-primary font-bold text-3xl">{{name}}</p>
+                <p class="text-primary font-semibold text-base">Informazioni sul profilo</p>
+                <label for="description">Descrizione</label>
+                <textarea id="description" name="description" rows="5" class="textarea-profile min-h-24" placeholder="Inserisci una descrizione"></textarea>
+                <p class="text-primary font-semibold text-base">Località</p>
+                <label for="city">Città di residenza o domicilio</label>
+                <input id="city" name="city" type="text" class="input-profile" placeholder="Inserisci la tua località">
+                <small>Compare sotto il tuo nome nella sezione Alumni della Directory</small>
+                <p class="text-primary font-semibold text-base">Contatti</p>
+                <label for="phone">Telefono / Cellulare</label>
+                <input id="phone" name="phone" type="phone" class="input-profile" placeholder="Inserisci il tuo numero di telefono/cellulare">
+                <label for="email">1. Indirizzo email principale</label>
+                <input id="email" name="email" type="email" disabled value="{{email}}" class="input-profile" placeholder="Inserisci il tuo indirizzo email">
+                <label for="email2">2. Altro indirizzo email</label>
+                <input id="email2" name="email2" type="email" class="input-profile" placeholder="Inserisci un altro indirizzo email">
+                <p class="text-primary font-semibold text-base">Esperienze lavorative attuale</p>
+                <div class="flex gap-2 w-full">
+                    <input id="employed" name="employed" type="checkbox" class="accent-primary">
+                    <label for="employed">Attualmente sono in cerca di un lavoro</label>
+                </div>
+                <label for="role">Ruolo professionale</label>
+                <input id="role" name="role" type="text" class="input-profile" placeholder="Inserisci professione">
+                <small>Compare sotto il tuo nome nella sezione Alumni della Directory</small>
+                <label for="company">Nome azienda</label>
+                <input id="company" name="company" type="text" class="input-profile" placeholder="Inserisci azienda">
+                <div class="flex gap-2 w-full">
+                    <input id="freelance" name="freelance" type="checkbox" class="accent-primary">
+                    <label for="freelance">Sono libero professionista</label>
+                </div>
+                <div class="flex gap-2 w-full">
+                    <input id="share" name="share" type="checkbox" class="accent-primary">
+                    <label for="share">Desidero non condividere le mie info lavorative</label>
+                </div>
+                <p class="text-primary font-semibold text-base">Aree tematiche di interesse</p>
+                <p>Seleziona le tue aree di interesse</p>
+                {{> multiautocompleteComponent top="true" className="multiautocomplete-profile" classNameElement="multiautocomplete-element-profile" name=filters.interests.name placeholder="Seleziona"
+                    items=filters.interests.options }}
+                <small>Ci aiuteranno a fornirti contenuti personalizzati e più attinenti al tuo profilo</small>
+                <ul class="flex gap-2" id="list-filters">
+                        
+                </ul>
+            </div>
+            <div class="sticky bottom-0 bg-white w-full border-t border-t-black flex pr-6 py-6 justify-end gap-6">
+                {{> buttonComponent text="Annulla" className="btn btn-secondary" onclick="closeEditProfile()" type="button" }}
+                {{> buttonComponent text="Salva modifiche" className="btn btn-primary" type="submit"}}
+            </div>
+        </form>
+    </div>
+</div>
+
+<script />

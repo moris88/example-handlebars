@@ -1,0 +1,17 @@
+/*COMPONENTS CSS*/
+
+@import "./navbar/navbar.css";
+@import "./button/button.css";
+@import "./avatar/avatar.css";
+@import "./avatarList/avatarList.css";
+@import "./cardEvent/cardEvent.css";
+@import "./cardNews/cardNews.css";
+@import "./cardProfile/cardProfile.css";
+@import "./input/input.css";
+@import "./chip/chip.css";
+@import "./chipSave/chipSave.css";
+@import "./formatDate/formatDate.css";
+@import "./calendar/calendar.css";
+@import "./multiautocomplete/multiautocomplete.css";
+@import "./modalEditProfile/modalEditProfile.css";
+@import "./modalAlumno/modalAlumno.css";

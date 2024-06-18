@@ -1,0 +1,37 @@
+{{#extend "index"}}
+{{#content "body"}}
+
+
+
+<!-- PAGE LOGIN HTML -->
+<div class="relative">
+    {{> navbarComponent }}
+
+    <div class="h-[88vh] w-full flex justify-between p-">
+        <section class="flex flex-col w-full lg:w-1/2 items-center justify-center">
+            <div class="flex justify-center items-center w-full">
+                <form class="flex flex-col items-start justify-start gap-2 md:p-20 p-2" id="form-login">
+                    <img src="../../assets/images/logo.png" class="w-[444px] h-auto"/>
+                    <h3 class="text-[32px] font-semibold mt-20">Accedi</h3>
+                    <p class="mt-2 text-base">Accedi alla tua area personale Alumno/a</p>
+                    {{> inputComponent id="email" type="email" placeholder="Inserisci Email" required=true className="rounded-lg border border-solid border-gray-300 text-black px-4 py-3 mt-6 outline-none w-full" }}
+                    {{> inputComponent id="password" type="password" placeholder="Inserisci Password" required=true className="rounded-lg border border-solid border-gray-300 text-black px-4 py-3 mt-4 outline-none w-full" }}
+                    <p class="w-full flex justify-end text-secondary mt-2 mb-10 text-sm"><a class="inline" href="#">Password dimenticata?</a></p>
+                    <button class="w-full flex justify-center items-center gap-5 rounded whitespace-nowrap bg-blue-600 px-2 py-2 text-white font-bold" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                        Entra con SPID
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="h-full w-1/2 object-cover lg:block hidden p-4">
+            <img src="../../assets/images/login-image.png" class="h-full w-full rounded-lg" />
+        </section>
+    </div>
+</div>
+
+<script />
+{{/content}}
+{{/extend}}

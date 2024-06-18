@@ -1,0 +1,66 @@
+{
+    "navItems": [
+        {
+            "href": "/chi-siamo",
+            "name": "Chi siamo"
+        },
+        {
+            "href": "/directory",
+            "name": "Directory"
+        },
+        {
+            "href": "/directory/alumni",
+            "name": "Alumni"
+        },
+        {
+            "href": "/directory/gruppi",
+            "name": "Gruppi"
+        },
+        {
+            "href": "/directory/notables",
+            "name": "Notables"
+        },
+        {
+            "href": "/mentoring-program",
+            "name": "Mentoring Program"
+        },
+        {
+            "href": "/news",
+            "name": "News"
+        },
+        {
+            "href": "/events",
+            "name": "Eventi"
+        },
+        {
+            "href": "/bandi-e-premi",
+            "name": "Bandi e Premi"
+        }
+    ],
+    "profile": {
+        "avatar": {
+            "src": "../../assets/images/avatar1.png",
+            "alt": "Avatar"
+        },
+        "name": "Chiara Rossi",
+        "role": "Mentor",
+        "course": "Giurisprudenza",
+        "phone": "3334455678",
+        "email": "chiara.rossi@mail.com",
+        "href": "/profile/1"
+    },
+    "logo": {
+        "src": "../../assets/images/logo.png",
+        "href": "/",
+        "alt": "Logo"
+    },
+    "avatar": {
+        "src": "../../assets/images/avatar1.png",
+        "alt": "Avatar",
+        "accountName": "Nome Cognome"
+    },
+    "dona": {
+        "href": "/dona",
+        "name": "Dona"
+    }
+}

@@ -1,0 +1,63 @@
+/*BUTTON CSS*/
+
+.btn {
+    @apply rounded whitespace-nowrap py-2 px-6 text-sm font-bold cursor-pointer
+}
+
+.btn-primary {
+    @apply bg-primary border border-primary text-white;
+}
+
+.btn-primary:hover {
+    @apply border-primary bg-secondary;
+
+}
+
+.btn-secondary {
+    @apply bg-white text-primary border border-primary;
+}
+
+.btn-secondary:hover {
+    @apply bg-red-100;
+}
+
+.btn-wait {
+    @apply bg-white text-blue-600 border border-blue-600;
+}
+
+.btn-wait:hover {
+    @apply bg-blue-50;
+}
+
+.btn-white {
+    @apply bg-white text-primary border border-white;
+}
+
+.btn-white:hover {
+    @apply border-primary;
+}
+
+.btn-white-transparent {
+    @apply bg-transparent text-white border border-white;
+}
+
+.btn-white-transparent:hover {
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.btn-black-transparent {
+    @apply bg-transparent text-black border border-black;
+}
+
+.btn-black-transparent:hover {
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.btn-transparent {
+    @apply bg-white text-black border border-white;
+}
+
+.btn-transparent:hover {
+    @apply border-[#CCCCCC];
+    background: var(--warmGray-50, #FAFAF9);
+}

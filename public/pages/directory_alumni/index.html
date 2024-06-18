@@ -1,0 +1,1647 @@
+<html>
+  <head>
+    <title>Unitrento</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<!-- PAGE DIRECTORY_ALUMNI HTML -->
+<div class="relative">
+    <!-- COMPONENT NAVBAR HTML -->
+    <!-- PER NON SOVRAPPORRE LE NAVBAR DI DRUPAL E DEL SITO METTI TOP-10, --->
+    <!-- OPPURE TOP-12 IN SU, IN BASE ALLA DIMENSIONE DELLA NAVBAR SE SEI --->
+    <!-- IN ADMIN ALL'INTERNO DI DRUPAL --->
+    <!-- ESEMPIO: <header class="navbar top-10"> --->
+    <header class="navbar top-0">
+      <div class="w-full flex justify-between items-center gap-4">
+        <a href="/" class="img-nav"><img src=../../assets/images/logo.png alt=Logo class="img-nav" /></a>
+        <nav class="hidden xl:flex whitespace-nowrap flex-nowrap">
+          <ul class="items-nav">
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/chi-siamo">Chi siamo</a>
+                </li>
+              <li
+                class="item-nav-active"
+              >
+                <button class="dropdown-navbar-btn">
+                  Directory
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down dropdown-navbar-icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                  </svg>
+                </button>
+                <ul class="dropdown-navbar-content">
+                    <li><a class="dropdown-navbar-element" href="/directory/alumni">Alumni</a></li>
+                    <li><a class="dropdown-navbar-element" href="/directory/gruppi">Gruppi</a></li>
+                    <li><a class="dropdown-navbar-element" href="/directory/notables">Notables</a></li>
+                </ul>
+              </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/mentoring-program">Mentoring Program</a>
+                </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/news">News</a>
+                </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/events">Eventi</a>
+                </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/bandi-e-premi">Bandi e Premi</a>
+                </li>
+            <li class="ml-2">
+              <!-- COMPONENT BUTTON HTML -->
+                <a class="btn btn-primary" href="/dona">
+                  Dona
+                </a>
+
+            </li>
+          </ul>
+        </nav>
+        <section>
+          <!-- COMPONENT AVATAR HTML -->
+          <div class='flex justify-between items-center gap-2'>
+            <div class='relative flex items-center text-left dropdown-navbar-avatar'>
+              <button class='btn-avatar' type='button'
+                onClick="openMenuAvatar()">
+                <span class="btn-img-avatar">
+                  <img src='../../assets/images/avatar1.png' alt='Avatar' class='w-10 h-10 rounded-full max-h-10 max-w-10 object-cover' />
+                </span>
+                <span class="btn-text-avatar">
+                  Chiara Rossi
+                  <svg class='dropdown-navbar-icon-avatar' viewBox='0 0 20 20' fill='currentColor'>
+                    <path fill-rule='evenodd'
+                    d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+                    clip-rule='evenodd'>
+                    </path>
+                  </svg>
+                </span>
+              </button>
+              <div
+                id="dropdown-menu-id"
+                class='opacity-0 invisible transition-all duration-300 transform origin-top-right -translate-y-2 scale-95'>
+                <div
+                  class='absolute right-0 w-80 mt-2 top-10 bg-white rounded-md shadow-lg outline-none flex flex-col justify-start items-start gap-6 p-10'>
+                  <div class="w-full flex justify-between items-start">
+                    <span class="rounded-full border-2 border-primary">
+                      <img src='../../assets/images/avatar1.png' alt='Avatar' class='w-20 h-20 min-h-20 rounded-full object-cover' />
+                    </span>
+                    <span>
+                      <button class="flex gap-2 items-center btn btn-transparent" type="button">
+                        Modifica
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                          <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                        </svg>
+                      </button>
+                    </span>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <h3 class='text-xl font-medium text-primary'>Ciao Chiara Rossi</h3>
+                    <p class='text-base font-medium'>Ruolo: Mentor</p>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <p class='text-base flex items-center gap-2'>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-primary">
+                        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                      </svg>
+                      Giurisprudenza</p>
+                    <p class='text-base flex items-center gap-2'>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-primary">
+                        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+                      </svg>
+                      3334455678</p>
+                    <p class='text-base flex items-center gap-2'>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-primary">
+                        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                      </svg>
+                      chiara.rossi@mail.com</p>
+                  </div>
+                  <!-- COMPONENT BUTTON HTML -->
+                    <a class="btn btn-secondary" href="/profile/1">
+                      Vai al profilo completo
+                    </a>
+
+                  <span>
+                    <button class='text-sm text-primary' onclick="logout()">
+                      <p class='flex items-center gap-2'>Esci <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                          fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5" />
+                        </svg></p>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <script>function openMenuAvatar(){const t=document.querySelector("#dropdown-menu-id");t.classList.remove("opacity-0","invisible","-translate-y-2","scale-95"),t.classList.add("opacity-100","visible","translate-y-0","scale-100");const e=document.querySelector(".dropdown-navbar-icon-avatar");e.classList.add("turntop"),document.addEventListener("click",function(a){a.target.closest(".dropdown-navbar-avatar")||(t.classList.remove("opacity-100","visible","translate-y-0","scale-100"),t.classList.add("opacity-0","invisible","-translate-y-2","scale-95"),e.classList.remove("turntop"))})}function logout(){fetch("http://localhost:3001/logout",{method:"POST",headers:{"Content-Type":"application/json"}}).then(t=>t.json()).then(t=>{t.message==="SUCCESS"&&(localStorage.getItem("token")&&localStorage.removeItem("token"),window.location.href="/external")})}
+          </script>    </section>
+      </div>
+
+      <section class="text-[10px] xl:hidden">
+        <nav class="w-full">
+          <ul class="items-nav">
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/chi-siamo">Chi siamo</a>
+            </li>
+            <li  class="item-nav-active" >
+              <a class="text-nowrap" href="/directory/alumni">Alumni</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/directory/gruppi">Gruppi</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/directory/notables">Notables</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/mentoring-program">Mentoring Program</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/news">News</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/events">Eventi</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/bandi-e-premi">Bandi e Premi</a>
+            </li>
+            <li>
+              <!-- COMPONENT BUTTON HTML -->
+                <a class="btn btn-primary" href="/dona">
+                  Dona
+                </a>
+
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+
+    <script>document.addEventListener("DOMContentLoaded",function(){function r(o){var s;o.preventDefault(),o.stopPropagation();const{type:t}=o,n=this.parentElement,c=!((s=n.querySelector(".dropdown-navbar-content"))!=null&&s.classList);c&&t!=="mouseover"?(n.querySelector(".dropdown-navbar-subcontent").classList.toggle("show"),document.querySelectorAll(".dropdown-navbar-subcontent.show").forEach(function(e){e!==n.querySelector(".dropdown-navbar-subcontent")&&e.classList.remove("show")})):c||(n.querySelector(".dropdown-navbar-content").classList.toggle("show"),n.querySelector(".dropdown-navbar-icon").classList.toggle("turntop"),document.querySelectorAll(".dropdown-navbar-content.show").forEach(function(e){e!==n.querySelector(".dropdown-navbar-content")&&e.classList.remove("show")}))}document.querySelectorAll(".dropdown-navbar-btn").forEach(function(o){o.addEventListener("click",r),o.addEventListener("mouseover",r)}),window.addEventListener("click",function(o){o.target.closest(".dropdown-navbar")||(document.querySelectorAll(".dropdown-navbar-content.show").forEach(function(t){t.classList.toggle("show")}),document.querySelectorAll(".dropdown-navbar-icon.turntop").forEach(function(t){t.classList.toggle("turntop")}),document.querySelectorAll(".dropdown-navbar-subcontent.show").forEach(function(t){t.classList.toggle("show")}))})});
+    </script>
+    <!-- COMPONENT MODALALUMNO HTML -->
+
+    <div id="backdrop-modal" class="modal modal-deactive">
+        <div class="w-full h-full flex justify-end">
+            <div id="content-modal" class="transition-all duration-1000 ease-in bg-white rounded-l-lg shadow-lg 2xl:w-1/4 xl:w-1/2 w-0 h-0 flex flex-col p-8 gap-6 opacity-0">
+                <!-- COMPONENT BUTTON HTML -->
+                  <button class="flex gap-2 items-center bg-white text-black rounded py-2" type="" onclick="closeModal()">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                        />
+                      </svg>
+                    Chiudi
+                  </button>
+
+
+                <div class='rounded-t-lg max-h-72 flex justify-center w-auto relative'>
+                    <img src='../../assets/images/avatar1.png' alt='Avatar1' class='w-auto h-auto rounded-lg object-cover object-top' />
+                </div>
+                <div class="w-full">
+                    <p class="font-bold text-4xl text-primary">Chiara Rossi</p>
+                    <p class="text-xl text-primary">Ruolo di Mentor</p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill text-primary" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                        </svg>
+                        <p>Vive a Trento</p>
+                    </div>
+                    <a class="flex justify-center items-center gap-2 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-800" href="https://www.linkedin.com/">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg>
+                        </span>
+                        <b>Profilo Linkedin</b>
+                    </a>
+                </div>
+                <p class="text-xl">Percorso di Studi</p>
+                <ul class="w-full max-h-52 overflow-y-auto flex flex-col gap-4">
+                    <li class="grid grid-cols-2 text-2xl">
+                        <div>
+                            <p class="font-medium text-primary">2019</p>
+                            <p>Master di II livello</p>
+                        </div>
+                        <div>
+                            <p class="text-primary">Corso di laurea</p>
+                            <p>Diritto legale - amministrativo</p>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-2 text-2xl">
+                        <div>
+                            <p class="font-medium text-primary">2018</p>
+                            <p>Laurea magistrale biennale</p>
+                        </div>
+                        <div>
+                            <p class="text-primary">Corso di laurea</p>
+                            <p>Giurisprudenza (LMG-01)</p>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-2 text-2xl">
+                        <div>
+                            <p class="font-medium text-primary">2015</p>
+                            <p>Laurea triennale</p>
+                        </div>
+                        <div>
+                            <p class="text-primary">Corso di laurea</p>
+                            <p>Scienze politiche (LMG-01)</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="lg:px-20 px-2">
+        <section class="flex flex-col justify-center items-center gap-6 py-20">
+            <!-- il valore 1200 deve essere la somma degli alumni  -->
+            <p class="inline-block text-secondary bg-red-200 border border-primary rounded-full px-6 py-3">
+                Più di 1200 Alumni nel mondo</p>
+            <p class="text-center font-bold text-4xl loading-10">Directory Alumni</p>
+            <p class="text-center font-normal text-2xl text-wrap inline lg:w-6/12 w-full">Scopri la grande community di
+                alumni laureati dell'Università di Trento, un network globale in costante crescita.</p>
+        </section>
+
+        <section class="flex flex-col gap-6">
+            <div class="flex justify-between items-center border-b border-b-black">
+                <span class="text-4xl font-bold py-3">
+                    Tutti gli alumni
+                </span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 w-full items-center gap-1">
+                <div class="w-full">
+                    <!-- COMPONENT MULTIAUTOCOMPLETE HTML -->
+                    <div
+                      class="multiautocomplete-style"
+                    >
+                      <div class="flex items-center w-auto gap-2">
+                        <input
+                          class="bg-transparent outline-none multiautocomplete-input w-full"
+                          id="Name-multiautocomplete-input"
+                          name="Name"
+                          type="text"
+                          placeholder="Cerca per nome"
+                          oninput="multiautocompleteSearch(event, 'Name')"
+                          onclick="multiautocompleteSearch(event, 'Name')"
+                        />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            class="cursor-pointer bi bi-search w-4 h-4 min-w-4"
+                            viewBox="0 0 16 16"
+                            onclick="multiautocompleteSearch(event, 'Name')"
+                          >
+                            <path
+                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                            />
+                          </svg>
+                      </div>
+                      <ul class="multiautocomplete-content noshow" id="Name">
+                        <li
+                          class="cursor-pointer hover:bg-red-100 flex w-full gap-1 rounded-lg p-1"
+                          onclick="multiautocompleteSearchClick(event, 'Name', '', 'multiautocomplete-element')"
+                        >-NONE-</li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Chiara Rossi', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Chiara Rossi" />
+                            <label class="cursor-pointer" for="Chiara Rossi">
+                              Chiara Rossi
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Marco Rossi', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Marco Rossi" />
+                            <label class="cursor-pointer" for="Marco Rossi">
+                              Marco Rossi
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Luca Bianchi', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Luca Bianchi" />
+                            <label class="cursor-pointer" for="Luca Bianchi">
+                              Luca Bianchi
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Maria Esposito', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Maria Esposito" />
+                            <label class="cursor-pointer" for="Maria Esposito">
+                              Maria Esposito
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Francesca Romano', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Francesca Romano" />
+                            <label class="cursor-pointer" for="Francesca Romano">
+                              Francesca Romano
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Antonio Ricci', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Antonio Ricci" />
+                            <label class="cursor-pointer" for="Antonio Ricci">
+                              Antonio Ricci
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Giulia Ferrara', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Giulia Ferrara" />
+                            <label class="cursor-pointer" for="Giulia Ferrara">
+                              Giulia Ferrara
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Name-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Name', 'Giovanni Conti', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Giovanni Conti" />
+                            <label class="cursor-pointer" for="Giovanni Conti">
+                              Giovanni Conti
+                            </label>
+                          </li>
+                      </ul>
+                    </div>
+
+
+                    <script>
+                      function multiautocompleteSearch(l, t) {
+                      l.preventDefault(), document.querySelector(`#${t}`).classList.remove('noshow'), document.querySelector(`#${t}`).classList.add('show');
+                      const e = document.querySelector(`#${t}-multiautocomplete-input`).value;
+                      e !== '' && document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(c => {c.textContent.toLocaleLowerCase().trim().includes(e.toLocaleLowerCase().trim()) ? c.classList.contains('!hidden') && c.classList.remove('!hidden') : c.classList.add('!hidden');});
+                    }
+
+                    function multiautocompleteSearchClick(l, t, e, c) {
+                      l.preventDefault();
+                      const u = document.querySelector(`#${t}-multiautocomplete-input`);
+                      if (u.value = e, e === '') {
+                        return;
+                      }
+                      let i = e.toLocaleLowerCase().trim().replace(/[ ,.()]/g, '');
+                      /^\d/.test(i) && (i = 'item' + i);
+                      const r = document.querySelector('#list-filters');
+                      if (r.children.length > 0 && Array.from(r.children).some(o => o.outerText === e)) {
+                        const o = document.querySelector(`#${i}`);
+                        r.removeChild(o);
+                        return;
+                      }
+                      r.innerHTML += `
+                        <li class="${c}" id=${i} onclick="deleteFilter('${i}')">
+                            ${e}
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </span>
+                        </li>
+                        `, document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(s => {
+                        if (s.outerText === e) {
+                          const o = s.querySelector('input');
+                          console.log(o), o.checked = !o.checked;
+                        }
+                      });
+                    }
+
+                    function deleteFilter(l) {
+                      const t = document.querySelector('#list-filters'),
+                        e = document.querySelector(`#${l}`);
+                      t.removeChild(e);
+                    }
+
+                    document.addEventListener('click', function (l) {!l.target.closest('.multiautocomplete-content') && !l.target.closest('.multiautocomplete-element') && !l.target.closest('.multiautocomplete-input') && document.querySelectorAll('.multiautocomplete-content').forEach(e => {e.classList.remove('show'), e.classList.add('noshow');});});
+                    </script>                </div>
+                <div class="w-full">
+                    <!-- COMPONENT MULTIAUTOCOMPLETE HTML -->
+                    <div
+                      class="multiautocomplete-style"
+                    >
+                      <div class="flex items-center w-auto gap-2">
+                        <input
+                          class="bg-transparent outline-none multiautocomplete-input w-full"
+                          id="Graduated-multiautocomplete-input"
+                          name="Graduated"
+                          type="text"
+                          placeholder="Titoli di studio"
+                          oninput="multiautocompleteSearch(event, 'Graduated')"
+                          onclick="multiautocompleteSearch(event, 'Graduated')"
+                        />
+                          <svg class='cursor-pointer w-5 h-5 min-w-5' viewBox='0 0 20 20' fill='currentColor'>
+                            <path fill-rule='evenodd'
+                              d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+                              clip-rule='evenodd'></path>
+                          </svg>
+                      </div>
+                      <ul class="multiautocomplete-content noshow" id="Graduated">
+                        <li
+                          class="cursor-pointer hover:bg-red-100 flex w-full gap-1 rounded-lg p-1"
+                          onclick="multiautocompleteSearchClick(event, 'Graduated', '', 'multiautocomplete-element')"
+                        >-NONE-</li>
+                          <li
+                            class="multiautocomplete-element Graduated-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Graduated', 'Laurea triennale', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Laurea triennale" />
+                            <label class="cursor-pointer" for="Laurea triennale">
+                              Laurea triennale
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Graduated-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Graduated', 'Laurea magistrale', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Laurea magistrale" />
+                            <label class="cursor-pointer" for="Laurea magistrale">
+                              Laurea magistrale
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Graduated-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Graduated', 'Laurea a ciclo unico', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Laurea a ciclo unico" />
+                            <label class="cursor-pointer" for="Laurea a ciclo unico">
+                              Laurea a ciclo unico
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Graduated-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Graduated', 'Master', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Master" />
+                            <label class="cursor-pointer" for="Master">
+                              Master
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Graduated-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Graduated', 'Dottorato', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Dottorato" />
+                            <label class="cursor-pointer" for="Dottorato">
+                              Dottorato
+                            </label>
+                          </li>
+                      </ul>
+                    </div>
+
+
+                    <script>function multiautocompleteSearch(l,t){l.preventDefault(),document.querySelector(`#${t}`).classList.remove("noshow"),document.querySelector(`#${t}`).classList.add("show");const e=document.querySelector(`#${t}-multiautocomplete-input`).value;e!==""&&document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(c=>{c.textContent.toLocaleLowerCase().trim().includes(e.toLocaleLowerCase().trim())?c.classList.contains("!hidden")&&c.classList.remove("!hidden"):c.classList.add("!hidden")})}function multiautocompleteSearchClick(l,t,e,c){l.preventDefault();const u=document.querySelector(`#${t}-multiautocomplete-input`);if(u.value=e,e==="")return;let i=e.toLocaleLowerCase().trim().replace(/[ ,.()]/g,"");/^\d/.test(i)&&(i="item"+i);const r=document.querySelector("#list-filters");if(r.children.length>0&&Array.from(r.children).some(o=>o.outerText===e)){const o=document.querySelector(`#${i}`);r.removeChild(o);return}r.innerHTML+=`
+                        <li class="${c}" id=${i} onclick="deleteFilter('${i}')">
+                            ${e}
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </span>
+                        </li>
+                        `,document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(s=>{if(s.outerText===e){const o=s.querySelector("input");console.log(o),o.checked=!o.checked}})}function deleteFilter(l){const t=document.querySelector("#list-filters"),e=document.querySelector(`#${l}`);t.removeChild(e)}document.addEventListener("click",function(l){!l.target.closest(".multiautocomplete-content")&&!l.target.closest(".multiautocomplete-element")&&!l.target.closest(".multiautocomplete-input")&&document.querySelectorAll(".multiautocomplete-content").forEach(e=>{e.classList.remove("show"),e.classList.add("noshow")})});
+                    </script>                </div>
+                <div class="w-full">
+                    <!-- COMPONENT MULTIAUTOCOMPLETE HTML -->
+                    <div
+                      class="multiautocomplete-style"
+                    >
+                      <div class="flex items-center w-auto gap-2">
+                        <input
+                          class="bg-transparent outline-none multiautocomplete-input w-full"
+                          id="Year-multiautocomplete-input"
+                          name="Year"
+                          type="text"
+                          placeholder="Anno di laurea"
+                          oninput="multiautocompleteSearch(event, 'Year')"
+                          onclick="multiautocompleteSearch(event, 'Year')"
+                        />
+                          <svg class='cursor-pointer w-5 h-5 min-w-5' viewBox='0 0 20 20' fill='currentColor'>
+                            <path fill-rule='evenodd'
+                              d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+                              clip-rule='evenodd'></path>
+                          </svg>
+                      </div>
+                      <ul class="multiautocomplete-content noshow" id="Year">
+                        <li
+                          class="cursor-pointer hover:bg-red-100 flex w-full gap-1 rounded-lg p-1"
+                          onclick="multiautocompleteSearchClick(event, 'Year', '', 'multiautocomplete-element')"
+                        >-NONE-</li>
+                          <li
+                            class="multiautocomplete-element Year-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Year', '2019', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="2019" />
+                            <label class="cursor-pointer" for="2019">
+                              2019
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Year-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Year', '2020', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="2020" />
+                            <label class="cursor-pointer" for="2020">
+                              2020
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Year-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Year', '2021', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="2021" />
+                            <label class="cursor-pointer" for="2021">
+                              2021
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Year-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Year', '2022', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="2022" />
+                            <label class="cursor-pointer" for="2022">
+                              2022
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Year-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Year', '2023', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="2023" />
+                            <label class="cursor-pointer" for="2023">
+                              2023
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Year-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Year', '2024', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="2024" />
+                            <label class="cursor-pointer" for="2024">
+                              2024
+                            </label>
+                          </li>
+                      </ul>
+                    </div>
+
+
+                    <script>function multiautocompleteSearch(l,t){l.preventDefault(),document.querySelector(`#${t}`).classList.remove("noshow"),document.querySelector(`#${t}`).classList.add("show");const e=document.querySelector(`#${t}-multiautocomplete-input`).value;e!==""&&document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(c=>{c.textContent.toLocaleLowerCase().trim().includes(e.toLocaleLowerCase().trim())?c.classList.contains("!hidden")&&c.classList.remove("!hidden"):c.classList.add("!hidden")})}function multiautocompleteSearchClick(l,t,e,c){l.preventDefault();const u=document.querySelector(`#${t}-multiautocomplete-input`);if(u.value=e,e==="")return;let i=e.toLocaleLowerCase().trim().replace(/[ ,.()]/g,"");/^\d/.test(i)&&(i="item"+i);const r=document.querySelector("#list-filters");if(r.children.length>0&&Array.from(r.children).some(o=>o.outerText===e)){const o=document.querySelector(`#${i}`);r.removeChild(o);return}r.innerHTML+=`
+                        <li class="${c}" id=${i} onclick="deleteFilter('${i}')">
+                            ${e}
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </span>
+                        </li>
+                        `,document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(s=>{if(s.outerText===e){const o=s.querySelector("input");console.log(o),o.checked=!o.checked}})}function deleteFilter(l){const t=document.querySelector("#list-filters"),e=document.querySelector(`#${l}`);t.removeChild(e)}document.addEventListener("click",function(l){!l.target.closest(".multiautocomplete-content")&&!l.target.closest(".multiautocomplete-element")&&!l.target.closest(".multiautocomplete-input")&&document.querySelectorAll(".multiautocomplete-content").forEach(e=>{e.classList.remove("show"),e.classList.add("noshow")})});
+                    </script>                </div>
+                <div class="w-full">
+                    <!-- COMPONENT MULTIAUTOCOMPLETE HTML -->
+                    <div
+                      class="multiautocomplete-style"
+                    >
+                      <div class="flex items-center w-auto gap-2">
+                        <input
+                          class="bg-transparent outline-none multiautocomplete-input w-full"
+                          id="Course-multiautocomplete-input"
+                          name="Course"
+                          type="text"
+                          placeholder="Corso di laurea"
+                          oninput="multiautocompleteSearch(event, 'Course')"
+                          onclick="multiautocompleteSearch(event, 'Course')"
+                        />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            class="cursor-pointer bi bi-search w-4 h-4 min-w-4"
+                            viewBox="0 0 16 16"
+                            onclick="multiautocompleteSearch(event, 'Course')"
+                          >
+                            <path
+                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                            />
+                          </svg>
+                      </div>
+                      <ul class="multiautocomplete-content noshow" id="Course">
+                        <li
+                          class="cursor-pointer hover:bg-red-100 flex w-full gap-1 rounded-lg p-1"
+                          onclick="multiautocompleteSearchClick(event, 'Course', '', 'multiautocomplete-element')"
+                        >-NONE-</li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Giurisprudenza', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Giurisprudenza" />
+                            <label class="cursor-pointer" for="Giurisprudenza">
+                              Giurisprudenza
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Economia', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Economia" />
+                            <label class="cursor-pointer" for="Economia">
+                              Economia
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Ingegneria', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Ingegneria" />
+                            <label class="cursor-pointer" for="Ingegneria">
+                              Ingegneria
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Medicina', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Medicina" />
+                            <label class="cursor-pointer" for="Medicina">
+                              Medicina
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Lettere', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Lettere" />
+                            <label class="cursor-pointer" for="Lettere">
+                              Lettere
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze Politiche', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze Politiche" />
+                            <label class="cursor-pointer" for="Scienze Politiche">
+                              Scienze Politiche
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze della Comunicazione', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze della Comunicazione" />
+                            <label class="cursor-pointer" for="Scienze della Comunicazione">
+                              Scienze della Comunicazione
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze della Formazione', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze della Formazione" />
+                            <label class="cursor-pointer" for="Scienze della Formazione">
+                              Scienze della Formazione
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze della Salute', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze della Salute" />
+                            <label class="cursor-pointer" for="Scienze della Salute">
+                              Scienze della Salute
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze della Sicurezza', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze della Sicurezza" />
+                            <label class="cursor-pointer" for="Scienze della Sicurezza">
+                              Scienze della Sicurezza
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze della Terra', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze della Terra" />
+                            <label class="cursor-pointer" for="Scienze della Terra">
+                              Scienze della Terra
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze della Vita', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze della Vita" />
+                            <label class="cursor-pointer" for="Scienze della Vita">
+                              Scienze della Vita
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze Economiche', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze Economiche" />
+                            <label class="cursor-pointer" for="Scienze Economiche">
+                              Scienze Economiche
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze Politiche', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze Politiche" />
+                            <label class="cursor-pointer" for="Scienze Politiche">
+                              Scienze Politiche
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze Sociali', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze Sociali" />
+                            <label class="cursor-pointer" for="Scienze Sociali">
+                              Scienze Sociali
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze Umanistiche', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze Umanistiche" />
+                            <label class="cursor-pointer" for="Scienze Umanistiche">
+                              Scienze Umanistiche
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Course-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Course', 'Scienze dell&#x27;Informazione', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Scienze dell&#x27;Informazione" />
+                            <label class="cursor-pointer" for="Scienze dell&#x27;Informazione">
+                              Scienze dell&#x27;Informazione
+                            </label>
+                          </li>
+                      </ul>
+                    </div>
+
+
+                    <script>function multiautocompleteSearch(l,t){l.preventDefault(),document.querySelector(`#${t}`).classList.remove("noshow"),document.querySelector(`#${t}`).classList.add("show");const e=document.querySelector(`#${t}-multiautocomplete-input`).value;e!==""&&document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(c=>{c.textContent.toLocaleLowerCase().trim().includes(e.toLocaleLowerCase().trim())?c.classList.contains("!hidden")&&c.classList.remove("!hidden"):c.classList.add("!hidden")})}function multiautocompleteSearchClick(l,t,e,c){l.preventDefault();const u=document.querySelector(`#${t}-multiautocomplete-input`);if(u.value=e,e==="")return;let i=e.toLocaleLowerCase().trim().replace(/[ ,.()]/g,"");/^\d/.test(i)&&(i="item"+i);const r=document.querySelector("#list-filters");if(r.children.length>0&&Array.from(r.children).some(o=>o.outerText===e)){const o=document.querySelector(`#${i}`);r.removeChild(o);return}r.innerHTML+=`
+                        <li class="${c}" id=${i} onclick="deleteFilter('${i}')">
+                            ${e}
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </span>
+                        </li>
+                        `,document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(s=>{if(s.outerText===e){const o=s.querySelector("input");console.log(o),o.checked=!o.checked}})}function deleteFilter(l){const t=document.querySelector("#list-filters"),e=document.querySelector(`#${l}`);t.removeChild(e)}document.addEventListener("click",function(l){!l.target.closest(".multiautocomplete-content")&&!l.target.closest(".multiautocomplete-element")&&!l.target.closest(".multiautocomplete-input")&&document.querySelectorAll(".multiautocomplete-content").forEach(e=>{e.classList.remove("show"),e.classList.add("noshow")})});
+                    </script>                </div>
+                <div class="w-full">
+                    <!-- COMPONENT MULTIAUTOCOMPLETE HTML -->
+                    <div
+                      class="multiautocomplete-style"
+                    >
+                      <div class="flex items-center w-auto gap-2">
+                        <input
+                          class="bg-transparent outline-none multiautocomplete-input w-full"
+                          id="Location-multiautocomplete-input"
+                          name="Location"
+                          type="text"
+                          placeholder="Location"
+                          oninput="multiautocompleteSearch(event, 'Location')"
+                          onclick="multiautocompleteSearch(event, 'Location')"
+                        />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            class="cursor-pointer bi bi-search w-4 h-4 min-w-4"
+                            viewBox="0 0 16 16"
+                            onclick="multiautocompleteSearch(event, 'Location')"
+                          >
+                            <path
+                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                            />
+                          </svg>
+                      </div>
+                      <ul class="multiautocomplete-content noshow" id="Location">
+                        <li
+                          class="cursor-pointer hover:bg-red-100 flex w-full gap-1 rounded-lg p-1"
+                          onclick="multiautocompleteSearchClick(event, 'Location', '', 'multiautocomplete-element')"
+                        >-NONE-</li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Roma, (RM)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Roma, (RM)" />
+                            <label class="cursor-pointer" for="Roma, (RM)">
+                              Roma, (RM)
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Roma Trastevere, (RM)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Roma Trastevere, (RM)" />
+                            <label class="cursor-pointer" for="Roma Trastevere, (RM)">
+                              Roma Trastevere, (RM)
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Roma Tiburtina, (RM)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Roma Tiburtina, (RM)" />
+                            <label class="cursor-pointer" for="Roma Tiburtina, (RM)">
+                              Roma Tiburtina, (RM)
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Roma Termini, (RM)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Roma Termini, (RM)" />
+                            <label class="cursor-pointer" for="Roma Termini, (RM)">
+                              Roma Termini, (RM)
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Roma Ostiense, (RM)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Roma Ostiense, (RM)" />
+                            <label class="cursor-pointer" for="Roma Ostiense, (RM)">
+                              Roma Ostiense, (RM)
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Rocca di Papa, (RM)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Rocca di Papa, (RM)" />
+                            <label class="cursor-pointer" for="Rocca di Papa, (RM)">
+                              Rocca di Papa, (RM)
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Rocca Priora, (RM)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Rocca Priora, (RM)" />
+                            <label class="cursor-pointer" for="Rocca Priora, (RM)">
+                              Rocca Priora, (RM)
+                            </label>
+                          </li>
+                          <li
+                            class="multiautocomplete-element Location-multiautocomplete-element"
+                            onclick="multiautocompleteSearchClick(event, 'Location', 'Rimini, (RN)', 'multiautocomplete-element')"
+                          >
+                            <input type="checkbox" class="accent-primary" name="Rimini, (RN)" />
+                            <label class="cursor-pointer" for="Rimini, (RN)">
+                              Rimini, (RN)
+                            </label>
+                          </li>
+                      </ul>
+                    </div>
+
+
+                    <script>function multiautocompleteSearch(l,t){l.preventDefault(),document.querySelector(`#${t}`).classList.remove("noshow"),document.querySelector(`#${t}`).classList.add("show");const e=document.querySelector(`#${t}-multiautocomplete-input`).value;e!==""&&document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(c=>{c.textContent.toLocaleLowerCase().trim().includes(e.toLocaleLowerCase().trim())?c.classList.contains("!hidden")&&c.classList.remove("!hidden"):c.classList.add("!hidden")})}function multiautocompleteSearchClick(l,t,e,c){l.preventDefault();const u=document.querySelector(`#${t}-multiautocomplete-input`);if(u.value=e,e==="")return;let i=e.toLocaleLowerCase().trim().replace(/[ ,.()]/g,"");/^\d/.test(i)&&(i="item"+i);const r=document.querySelector("#list-filters");if(r.children.length>0&&Array.from(r.children).some(o=>o.outerText===e)){const o=document.querySelector(`#${i}`);r.removeChild(o);return}r.innerHTML+=`
+                        <li class="${c}" id=${i} onclick="deleteFilter('${i}')">
+                            ${e}
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </span>
+                        </li>
+                        `,document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(s=>{if(s.outerText===e){const o=s.querySelector("input");console.log(o),o.checked=!o.checked}})}function deleteFilter(l){const t=document.querySelector("#list-filters"),e=document.querySelector(`#${l}`);t.removeChild(e)}document.addEventListener("click",function(l){!l.target.closest(".multiautocomplete-content")&&!l.target.closest(".multiautocomplete-element")&&!l.target.closest(".multiautocomplete-input")&&document.querySelectorAll(".multiautocomplete-content").forEach(e=>{e.classList.remove("show"),e.classList.add("noshow")})});
+                    </script>                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4 flex-wrap">
+                    <p><span class="text-primary">24</span> risultati</p>
+                    <ul class="flex gap-2" id="list-filters">
+
+                    </ul>
+                    <!-- COMPONENT BUTTON HTML -->
+                      <a class="btn-secondary py-2 px-4
+                                        text-base" href="/directory/alumni">
+                        Reset filtri
+                      </a>
+
+                </div>
+                <div class="flex items-center justify-between"> <!-- button pagina precedente -->
+                    <button disabled class="text-primary disabled:text-gray-300" type="button">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                        </svg>
+                    </button>
+                    <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                        <!-- corrente/totale pagine -->
+                        <strong class="text-primary whitespace-nowrap">1/10</strong>
+                    </p>
+                    <!-- button pagina successiva -->
+                    <button class="text-primary disabled:text-gray-300" type="button">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 py-6">
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                    <img
+                      src="../../assets/images/avatar1.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Chiara Rossi</p>
+                      <p class="font-base text-base text-left">2019</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Laurea magistrale biennale</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Giurisprudenza</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                    <img
+                      src="../../assets/images/avatar.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Marco Rossi</p>
+                      <p class="font-base text-base text-left">2019</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Laurea magistrale biennale</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Giurisprudenza</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                    <img
+                      src="../../assets/images/avatar.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Luca Bianchi</p>
+                      <p class="font-base text-base text-left">2019</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Laurea magistrale biennale</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Giurisprudenza</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                    <img
+                      src="../../assets/images/avatar.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Maria Esposito</p>
+                      <p class="font-base text-base text-left">2019</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Laurea magistrale biennale</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Giurisprudenza</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                    <img
+                      src="../../assets/images/avatar.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Francesca Romano</p>
+                      <p class="font-base text-base text-left">2019</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Laurea magistrale biennale</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Giurisprudenza</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                    <img
+                      src="../../assets/images/avatar.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Antonio Ricci</p>
+                      <p class="font-base text-base text-left">2019</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Laurea magistrale biennale</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Giurisprudenza</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                      <div
+                        class="absolute top-5 right-5 flex gap-2 items-center bg-yellow-50 text-orange-600 border border-orange-600 px-3 py-1 rounded-full"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star text-orange-600"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                          />
+                        </svg>
+                        Notable
+                      </div>
+                    <img
+                      src="../../assets/images/avatar.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Giulia Ferrara</p>
+                      <p class="font-base text-base text-left">Laureato nel
+                        2018
+                        &#183;
+                        Avvocato</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Diritto legale e amministrativo</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Master di || livello</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+                <!-- COMPONENT CARDALUMNO HTML -->
+                <button
+                  type="button"
+                  class="bg-white rounded-lg hover:shadow-lg border border-gray-100 hover:border-secondary cursor-pointer min-w-64"
+                  data-hs-overlay="#alumno-backdrop-modal"
+                  onclick="openModal()"
+                >
+                  <div
+                    class="rounded-t-lg min-h-64 max-h-64 flex justify-center w-full relative"
+                  >
+                    <img
+                      src="../../assets/images/avatar.png"
+                      alt="Avatar1"
+                      class="w-full h-64 rounded-t-lg object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <p
+                      class="text-primary font-bold text-xl text-left"
+                    >Giovanni Conti</p>
+                      <p class="font-base text-base text-left">2019</p>
+                    <div class="flex flex-col gap-1 mt-4">
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+                          />
+                          <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+                          />
+                          <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+                          />
+                        </svg>
+                        <p class="text-left">Laurea magistrale biennale</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-6 h-6 text-primary"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <p class="text-left">Giurisprudenza</p>
+                      </div>
+                      <div class="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-house-door-fill text-primary w-6 h-6"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                          />
+                        </svg>
+                        <p>Vive a Trento</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+
+            </div>
+            <!-- PAGINATION -->
+            <div class="w-full flex justify-center items-center gap-2">
+                <!-- button pagina precedente -->
+                <button disabled class="text-primary disabled:text-gray-300" type="button">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                    </svg>
+                </button>
+                <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                    <!-- corrente/totale pagine -->
+                    <strong class="text-primary whitespace-nowrap">1/10</strong>
+                </p>
+                <!-- button pagina successiva -->
+                <button class="text-primary disabled:text-gray-300" type="button">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<script>function openModal(){document.querySelector("#content-modal").classList.add("show-modal"),document.querySelector("#backdrop-modal").classList.remove("modal-deactive"),document.querySelector("#backdrop-modal").classList.add("modal-active")}function closeModal(){document.querySelector("#content-modal").classList.remove("show-modal"),document.querySelector("#backdrop-modal").classList.add("modal-deactive"),document.querySelector("#backdrop-modal").classList.remove("modal-active")}
+</script>
+
+  </body>
+</html>

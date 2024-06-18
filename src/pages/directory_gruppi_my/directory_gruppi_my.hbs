@@ -1,0 +1,34 @@
+<!-- PAGE DIRECTORY_GRUPPI_MY_ALL HTML -->
+
+{{#extend "index"}}
+{{#content "body"}}
+
+<div class="relative">
+    {{> navbarComponent }}
+
+    <section class="!px-20 rounded-b-lg">
+        <div class="flex pt-20 items-start w-full rounded-b-lg">
+            <div class="w-1/2 h-full flex flex-col items-start justify-end gap-4 text-white">
+                {{> buttonComponent prev="true" anchor="true" className="flex gap-2 items-center btn btn-white !text-black" text="Indietro"
+                href="/directory/gruppi"}}
+            </div>
+        </div>
+    </section>
+
+    <div class="!px-20 !mt-0 mb-8">
+        <div class="border-b border-b-black my-10">
+            <span class="text-4xl font-bold py-3">
+                I tuoi gruppi
+            </span>
+        </div>
+        <section class="flex flex-col gap-10">
+            {{#each my as |element|}}
+            {{> cardGruppoComponent image=element.image title=element.title subtitle=element.subtitle tags=element.tags description=element.description subscribers=element.subscribers subscriber=element.subscriber}}
+            {{/each}}
+        </section>
+    </div>
+</div>
+
+<script />
+{{/content}}
+{{/extend}}

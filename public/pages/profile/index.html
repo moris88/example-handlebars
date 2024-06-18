@@ -1,0 +1,1503 @@
+<html>
+  <head>
+    <title>Unitrento</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<!-- PAGE PROFILE HTML -->
+<div class="relative">
+<!-- COMPONENT NAVBAR HTML -->
+<!-- PER NON SOVRAPPORRE LE NAVBAR DI DRUPAL E DEL SITO METTI TOP-10, --->
+<!-- OPPURE TOP-12 IN SU, IN BASE ALLA DIMENSIONE DELLA NAVBAR SE SEI --->
+<!-- IN ADMIN ALL'INTERNO DI DRUPAL --->
+<!-- ESEMPIO: <header class="navbar top-10"> --->
+<header class="navbar top-0">
+  <div class="w-full flex justify-between items-center gap-4">
+    <a href="/" class="img-nav"><img src=../../assets/images/logo.png alt=Logo class="img-nav" /></a>
+    <nav class="hidden xl:flex whitespace-nowrap flex-nowrap">
+      <ul class="items-nav">
+            <li  class="item-nav" >
+            <a class="text-nowrap" href="/chi-siamo">Chi siamo</a>
+            </li>
+          <li
+            class="item-nav"
+          >
+            <button class="dropdown-navbar-btn">
+              Directory
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down dropdown-navbar-icon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+              </svg>
+            </button>
+            <ul class="dropdown-navbar-content">
+                <li><a class="dropdown-navbar-element" href="/directory/alumni">Alumni</a></li>
+                <li><a class="dropdown-navbar-element" href="/directory/gruppi">Gruppi</a></li>
+                <li><a class="dropdown-navbar-element" href="/directory/notables">Notables</a></li>
+            </ul>
+          </li>
+            <li  class="item-nav" >
+            <a class="text-nowrap" href="/mentoring-program">Mentoring Program</a>
+            </li>
+            <li  class="item-nav" >
+            <a class="text-nowrap" href="/news">News</a>
+            </li>
+            <li  class="item-nav" >
+            <a class="text-nowrap" href="/events">Eventi</a>
+            </li>
+            <li  class="item-nav" >
+            <a class="text-nowrap" href="/bandi-e-premi">Bandi e Premi</a>
+            </li>
+        <li class="ml-2">
+          <!-- COMPONENT BUTTON HTML -->
+            <a class="btn btn-primary" href="/dona">
+              Dona
+            </a>
+
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <!-- COMPONENT AVATAR HTML -->
+      <div class='flex justify-between items-center gap-2'>
+        <div class='relative flex items-center text-left dropdown-navbar-avatar'>
+          <button class='btn-avatar' type='button'
+            onClick="openMenuAvatar()">
+            <span class="btn-img-avatar">
+              <img src='../../assets/images/avatar1.png' alt='Avatar' class='w-10 h-10 rounded-full max-h-10 max-w-10 object-cover' />
+            </span>
+            <span class="btn-text-avatar">
+              Chiara Rossi
+              <svg class='dropdown-navbar-icon-avatar' viewBox='0 0 20 20' fill='currentColor'>
+                <path fill-rule='evenodd'
+                d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+                clip-rule='evenodd'>
+                </path>
+              </svg>
+            </span>
+          </button>
+          <div
+            id="dropdown-menu-id"
+            class='opacity-0 invisible transition-all duration-300 transform origin-top-right -translate-y-2 scale-95'>
+            <div
+              class='absolute right-0 w-80 mt-2 top-10 bg-white rounded-md shadow-lg outline-none flex flex-col justify-start items-start gap-6 p-10'>
+              <div class="w-full flex justify-between items-start">
+                <span class="rounded-full border-2 border-primary">
+                  <img src='../../assets/images/avatar1.png' alt='Avatar' class='w-20 h-20 min-h-20 rounded-full object-cover' />
+                </span>
+                <span>
+                  <button class="flex gap-2 items-center btn btn-transparent" type="button">
+                    Modifica
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                      <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                    </svg>
+                  </button>
+                </span>
+              </div>
+
+              <div class="flex flex-col">
+                <h3 class='text-xl font-medium text-primary'>Ciao Chiara Rossi</h3>
+                <p class='text-base font-medium'>Ruolo: Mentor</p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class='text-base flex items-center gap-2'>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-primary">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                  </svg>
+                  Giurisprudenza</p>
+                <p class='text-base flex items-center gap-2'>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-primary">
+                    <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+                  </svg>
+                  3334455678</p>
+                <p class='text-base flex items-center gap-2'>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-primary">
+                    <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                    <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                  </svg>
+                  chiara.rossi@mail.com</p>
+              </div>
+              <!-- COMPONENT BUTTON HTML -->
+                <a class="btn btn-secondary" href="/profile/1">
+                  Vai al profilo completo
+                </a>
+
+              <span>
+                <button class='text-sm text-primary' onclick="logout()">
+                  <p class='flex items-center gap-2'>Esci <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5" />
+                    </svg></p>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <script>function openMenuAvatar(){const t=document.querySelector("#dropdown-menu-id");t.classList.remove("opacity-0","invisible","-translate-y-2","scale-95"),t.classList.add("opacity-100","visible","translate-y-0","scale-100");const e=document.querySelector(".dropdown-navbar-icon-avatar");e.classList.add("turntop"),document.addEventListener("click",function(a){a.target.closest(".dropdown-navbar-avatar")||(t.classList.remove("opacity-100","visible","translate-y-0","scale-100"),t.classList.add("opacity-0","invisible","-translate-y-2","scale-95"),e.classList.remove("turntop"))})}function logout(){fetch("http://localhost:3001/logout",{method:"POST",headers:{"Content-Type":"application/json"}}).then(t=>t.json()).then(t=>{t.message==="SUCCESS"&&(localStorage.getItem("token")&&localStorage.removeItem("token"),window.location.href="/external")})}
+      </script>    </section>
+  </div>
+
+  <section class="text-[10px] xl:hidden">
+    <nav class="w-full">
+      <ul class="items-nav">
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/chi-siamo">Chi siamo</a>
+        </li>
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/directory/alumni">Alumni</a>
+        </li>
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/directory/gruppi">Gruppi</a>
+        </li>
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/directory/notables">Notables</a>
+        </li>
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/mentoring-program">Mentoring Program</a>
+        </li>
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/news">News</a>
+        </li>
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/events">Eventi</a>
+        </li>
+        <li  class="item-nav" >
+          <a class="text-nowrap" href="/bandi-e-premi">Bandi e Premi</a>
+        </li>
+        <li>
+          <!-- COMPONENT BUTTON HTML -->
+            <a class="btn btn-primary" href="/dona">
+              Dona
+            </a>
+
+        </li>
+      </ul>
+    </nav>
+  </section>
+</header>
+
+
+<script>document.addEventListener("DOMContentLoaded",function(){function r(o){var s;o.preventDefault(),o.stopPropagation();const{type:t}=o,n=this.parentElement,c=!((s=n.querySelector(".dropdown-navbar-content"))!=null&&s.classList);c&&t!=="mouseover"?(n.querySelector(".dropdown-navbar-subcontent").classList.toggle("show"),document.querySelectorAll(".dropdown-navbar-subcontent.show").forEach(function(e){e!==n.querySelector(".dropdown-navbar-subcontent")&&e.classList.remove("show")})):c||(n.querySelector(".dropdown-navbar-content").classList.toggle("show"),n.querySelector(".dropdown-navbar-icon").classList.toggle("turntop"),document.querySelectorAll(".dropdown-navbar-content.show").forEach(function(e){e!==n.querySelector(".dropdown-navbar-content")&&e.classList.remove("show")}))}document.querySelectorAll(".dropdown-navbar-btn").forEach(function(o){o.addEventListener("click",r),o.addEventListener("mouseover",r)}),window.addEventListener("click",function(o){o.target.closest(".dropdown-navbar")||(document.querySelectorAll(".dropdown-navbar-content.show").forEach(function(t){t.classList.toggle("show")}),document.querySelectorAll(".dropdown-navbar-icon.turntop").forEach(function(t){t.classList.toggle("turntop")}),document.querySelectorAll(".dropdown-navbar-subcontent.show").forEach(function(t){t.classList.toggle("show")}))})});
+</script>
+<!-- COMPONENT MODALEDITPROFILE HTML -->
+
+<div id="backdrop-modal" class="modal-edit modal-edit-deactive">
+    <div class="w-full h-full flex justify-center items-center">
+        <form onsubmit="sendUpdate(event)" id="content-modal" class="w-auto h-auto max-w-screen max-h-screen lg:max-h-[95%] lg:max-w-[35%] bg-white rounded-lg shadow-lg flex flex-col gap-6 opacity-0 relative overflow-y-hidden">
+            <div class="sticky top-0 w-full flex justify-between items-center border-b border-b-black p-6 bg-white">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="font-bold text-xl">Modifica Profilo</p>
+                </div>
+                <button class="flex gap-2 items-center"
+                onclick="closeEditProfile()" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col gap-4 px-6 max-h-96 overflow-y-auto">
+                <p class="text-primary font-bold text-3xl">Chiara Rossi</p>
+                <p class="text-primary font-semibold text-base">Informazioni sul profilo</p>
+                <label for="description">Descrizione</label>
+                <textarea id="description" name="description" rows="5" class="textarea-profile min-h-24" placeholder="Inserisci una descrizione"></textarea>
+                <p class="text-primary font-semibold text-base">Località</p>
+                <label for="city">Città di residenza o domicilio</label>
+                <input id="city" name="city" type="text" class="input-profile" placeholder="Inserisci la tua località">
+                <small>Compare sotto il tuo nome nella sezione Alumni della Directory</small>
+                <p class="text-primary font-semibold text-base">Contatti</p>
+                <label for="phone">Telefono / Cellulare</label>
+                <input id="phone" name="phone" type="phone" class="input-profile" placeholder="Inserisci il tuo numero di telefono/cellulare">
+                <label for="email">1. Indirizzo email principale</label>
+                <input id="email" name="email" type="email" disabled value="chiara.rossi@mail.com" class="input-profile" placeholder="Inserisci il tuo indirizzo email">
+                <label for="email2">2. Altro indirizzo email</label>
+                <input id="email2" name="email2" type="email" class="input-profile" placeholder="Inserisci un altro indirizzo email">
+                <p class="text-primary font-semibold text-base">Esperienze lavorative attuale</p>
+                <div class="flex gap-2 w-full">
+                    <input id="employed" name="employed" type="checkbox" class="accent-primary">
+                    <label for="employed">Attualmente sono in cerca di un lavoro</label>
+                </div>
+                <label for="role">Ruolo professionale</label>
+                <input id="role" name="role" type="text" class="input-profile" placeholder="Inserisci professione">
+                <small>Compare sotto il tuo nome nella sezione Alumni della Directory</small>
+                <label for="company">Nome azienda</label>
+                <input id="company" name="company" type="text" class="input-profile" placeholder="Inserisci azienda">
+                <div class="flex gap-2 w-full">
+                    <input id="freelance" name="freelance" type="checkbox" class="accent-primary">
+                    <label for="freelance">Sono libero professionista</label>
+                </div>
+                <div class="flex gap-2 w-full">
+                    <input id="share" name="share" type="checkbox" class="accent-primary">
+                    <label for="share">Desidero non condividere le mie info lavorative</label>
+                </div>
+                <p class="text-primary font-semibold text-base">Aree tematiche di interesse</p>
+                <p>Seleziona le tue aree di interesse</p>
+                <!-- COMPONENT MULTIAUTOCOMPLETE HTML -->
+                <div
+                  class="multiautocomplete-profile"
+                >
+                  <div class="flex items-center w-auto gap-2">
+                    <input
+                      class="bg-transparent outline-none multiautocomplete-input w-full"
+                      id="Interests-multiautocomplete-input"
+                      name="Interests"
+                      type="text"
+                      placeholder="Seleziona"
+                      oninput="multiautocompleteSearch(event, 'Interests')"
+                      onclick="multiautocompleteSearch(event, 'Interests')"
+                    />
+                      <svg class='cursor-pointer w-5 h-5 min-w-5' viewBox='0 0 20 20' fill='currentColor'>
+                        <path fill-rule='evenodd'
+                          d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+                          clip-rule='evenodd'></path>
+                      </svg>
+                  </div>
+                  <ul class="multiautocomplete-content noshow !-top-52 min-h-52" id="Interests">
+                    <li
+                      class="cursor-pointer hover:bg-red-100 flex w-full gap-1 rounded-lg p-1"
+                      onclick="multiautocompleteSearchClick(event, 'Interests', '', 'multiautocomplete-element-profile')"
+                    >-NONE-</li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Tecnologia', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Tecnologia" />
+                        <label class="cursor-pointer" for="Tecnologia">
+                          Tecnologia
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Arte', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Arte" />
+                        <label class="cursor-pointer" for="Arte">
+                          Arte
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Design', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Design" />
+                        <label class="cursor-pointer" for="Design">
+                          Design
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Attualità politica', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Attualità politica" />
+                        <label class="cursor-pointer" for="Attualità politica">
+                          Attualità politica
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Diritto civile', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Diritto civile" />
+                        <label class="cursor-pointer" for="Diritto civile">
+                          Diritto civile
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Innovazione in campo medico', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Innovazione in campo medico" />
+                        <label class="cursor-pointer" for="Innovazione in campo medico">
+                          Innovazione in campo medico
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Sociologia', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Sociologia" />
+                        <label class="cursor-pointer" for="Sociologia">
+                          Sociologia
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Informatica', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Informatica" />
+                        <label class="cursor-pointer" for="Informatica">
+                          Informatica
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Astrofisica', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Astrofisica" />
+                        <label class="cursor-pointer" for="Astrofisica">
+                          Astrofisica
+                        </label>
+                      </li>
+                      <li
+                        class="multiautocomplete-element Interests-multiautocomplete-element"
+                        onclick="multiautocompleteSearchClick(event, 'Interests', 'Animali', 'multiautocomplete-element-profile')"
+                      >
+                        <input type="checkbox" class="accent-primary" name="Animali" />
+                        <label class="cursor-pointer" for="Animali">
+                          Animali
+                        </label>
+                      </li>
+                  </ul>
+                </div>
+
+
+                <script>function multiautocompleteSearch(l,t){l.preventDefault(),document.querySelector(`#${t}`).classList.remove("noshow"),document.querySelector(`#${t}`).classList.add("show");const e=document.querySelector(`#${t}-multiautocomplete-input`).value;e!==""&&document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(c=>{c.textContent.toLocaleLowerCase().trim().includes(e.toLocaleLowerCase().trim())?c.classList.contains("!hidden")&&c.classList.remove("!hidden"):c.classList.add("!hidden")})}function multiautocompleteSearchClick(l,t,e,c){l.preventDefault();const u=document.querySelector(`#${t}-multiautocomplete-input`);if(u.value=e,e==="")return;let i=e.toLocaleLowerCase().trim().replace(/[ ,.()]/g,"");/^\d/.test(i)&&(i="item"+i);const r=document.querySelector("#list-filters");if(r.children.length>0&&Array.from(r.children).some(o=>o.outerText===e)){const o=document.querySelector(`#${i}`);r.removeChild(o);return}r.innerHTML+=`
+                    <li class="${c}" id=${i} onclick="deleteFilter('${i}')">
+                        ${e}
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                            </svg>
+                        </span>
+                    </li>
+                    `,document.querySelectorAll(`.${t}-multiautocomplete-element`).forEach(s=>{if(s.outerText===e){const o=s.querySelector("input");console.log(o),o.checked=!o.checked}})}function deleteFilter(l){const t=document.querySelector("#list-filters"),e=document.querySelector(`#${l}`);t.removeChild(e)}document.addEventListener("click",function(l){!l.target.closest(".multiautocomplete-content")&&!l.target.closest(".multiautocomplete-element")&&!l.target.closest(".multiautocomplete-input")&&document.querySelectorAll(".multiautocomplete-content").forEach(e=>{e.classList.remove("show"),e.classList.add("noshow")})});
+                </script>                <small>Ci aiuteranno a fornirti contenuti personalizzati e più attinenti al tuo profilo</small>
+                <ul class="flex gap-2" id="list-filters">
+
+                </ul>
+            </div>
+            <div class="sticky bottom-0 bg-white w-full border-t border-t-black flex pr-6 py-6 justify-end gap-6">
+                <!-- COMPONENT BUTTON HTML -->
+                  <button class="btn btn-secondary" type="button" onclick="closeEditProfile()">
+                    Annulla
+                  </button>
+
+                <!-- COMPONENT BUTTON HTML -->
+                  <button class="btn btn-primary" type="submit" onclick="">
+                    Salva modifiche
+                  </button>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-6 mt-4">
+    <!-- COMPONENT CARDPROFILE HTML -->
+    <section class="relative w-full h-full">
+      <div
+        class="sticky top-10 flex flex-col justify-start items-center bg-white px-10 py-6 rounded-lg"
+      >
+        <div
+          class="rounded-lg max-w-80 min-h-56 max-h-56 flex justify-center w-full"
+        >
+          <img
+            src="../../assets/images/avatar1.png"
+            alt="Avatar1"
+            class="w-80 h-56 rounded-lg object-cover object-top"
+          />
+        </div>
+        <div
+          class="w-full flex flex-col sm:items-center items-start gap-6 lg:items-start relative"
+        >
+          <div class="w-full flex flex-col mt-10">
+            <div class="flex justify-between flex-wrap items-center w-full">
+              <h2 class="text-2xl font-bold text-primary">Chiara Rossi</h2>
+              <button class="flex gap-2 items-center btn btn-transparent" type="button" onclick="editProfile()">
+                Modifica
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                  <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                </svg>
+              </button>
+            </div>
+            <p class="text-primary">Ruolo: Mentor</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2" id="contatti">
+              <p class="text-base font-medium">Contatti</p>
+              <ul>
+                <li class="li-card-profile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-telephone-fill text-primary"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                    />
+                  </svg>
+                  +39 123 456 7890
+                </li>
+                <li class="li-card-profile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-envelope-fill text-primary"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+                    />
+                  </svg>
+                  chiara.rossi@gmail.com
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-base font-medium">Info Alumno/a</p>
+              <ul>
+                <li class="li-card-profile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill text-primary"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                    />
+                  </svg>
+                  Laureata in
+                  Giurisprudenza
+                </li>
+                <li class="li-card-profile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-calendar-fill text-primary"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5"
+                    />
+                  </svg>
+                  2019
+                  -
+                  2023</li>
+                <li class="li-card-profile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-building-fill text-primary"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5M4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"
+                    />
+                  </svg>
+                  Università degli Studi di Trento
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-base font-medium">Info Lavorative</p>
+              <ul>
+                <li class="li-card-profile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-geo-alt-fill text-primary"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+                    />
+                  </svg>
+                  Lavora presso
+                  Studio Legale Rossi
+                </li>
+                <li class="li-card-profile">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-stars text-primary"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"
+                    />
+                  </svg>
+                  Avvocato
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-auto flex flex-col gap-6 justify-center">
+            <a
+              class="flex justify-center items-center gap-2 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-800"
+              href="https://www.linkedin.com"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                  />
+                </svg>
+              </span>
+              <b>Profilo Linkedin</b>
+            </a>
+            <button onclick="logout()" class="flex items-center gap-2">
+              Log out
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-bar-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <script>function logout(){fetch("http://localhost:3001/logout",{method:"POST",headers:{"Content-Type":"application/json"}}).then(o=>o.json()).then(o=>{o.message==="SUCCESS"&&(window.location.href="/")})}
+    </script>    <section class="xl:col-span-4 md:col-span-2 col-span-1 flex flex-col gap-6">
+        <div class="w-full lg:mt-0 mt-6 flex flex-col gap-6">
+            <div class="flex flex-col lg:flex-row justify-between w-full bg-rose-50 border border-primary rounded-lg p-8">
+                <div class="lg:w-3/4 w-full">
+                    <p class="text-primary text-2xl font-bold">Ciao Chiara, completa il tuo profilo!</p>
+                    <p class="text-primary text-xl text-wrap">Inserisci i tuoi interessi e iscriviti ai gruppi che
+                        più ti interessano! Confronta le tue compatibilità e partecipa agli eventi del tuo gruppo.</p>
+                </div>
+                <div class="lg:w-1/4 w-full flex lg:flex-col flex-row justify-end items-end">
+                    <!-- COMPONENT BUTTON HTML -->
+                      <button class="btn btn-secondary" type="" onclick="editProfile()">
+                        Aggiorna il tuo profilo
+                      </button>
+
+                </div>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Descrizione</h4>
+                <p>Laureato in Giurisprudenza con passione per il diritto e la ricerca della giustizia. Esperto nella comprensione e nell&#x27;applicazione delle leggi, ho acquisito competenze analitiche e problem-solving durante il percorso accademico. La mia formazione giuridica mi ha permesso di sviluppare una solida capacità di analisi critica e di formulare argomentazioni chiare e persuasive.</p>
+            </div>
+            <div class="bg-white rounded-lg w-full flex justify-between gap-6 p-8">
+                <h4 class="font-bold inline">Elementi salvati</h4>
+                <a href="/profile/1/events_save" class="text-primary flex items-center gap-2">
+                    Visualizza (5)
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right text-black" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col">
+                <div class="w-full flex justify-between gap-6 px-8 py-8">
+                    <h4 class="font-bold">I tuoi prossimi eventi</h4>
+                    <a href="/profile/1/events" class="text-primary flex items-center gap-2">
+                        Visualizza (4)
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right text-black" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="px-8 pb-8 flex flex-col gap-6">
+                        <!-- COMPONENT CARDEVENT HTML -->
+                        <div id="event-my-1" class="w-full">
+                            <div class="w-full flex justify-start bg-white rounded-2xl border border-gray-400 max-h-[155px] ">
+                                <div class="w-auto hidden lg:flex">
+                                    <img src="../../assets/images/evento1.png" alt="Evento 1" class="h-auto min-w-[254px] max-w-[254px] rounded-2xl object-cover object-top" />
+                                </div>
+                                <div class="w-full flex gap-6 p-8">
+                                    <div class="flex-col justify-start items-start h-full">
+                                        <!-- COMPONENT FORMATDATE HTML -->
+                                          <div class="flex flex-col"><span class="monthContainer">Gen</span><span class="dayContainer">14</span></div>
+
+                                    </div>
+                                    <div class="flex flex-col w-full items-stretch gap-4 justify-between">
+                                        <div class="min-h-10 max-h-10 text-ellipsis overflow-hidden flex justify-between items-center">
+                                            <p class="text-2xl font-bold">
+                                                <!-- maxChar 100 -->
+                                                Giornata dello Sport e del Benessere con atleti agonistici
+                                            </p>
+                                            <!-- button iscrizione=true -->
+                                            <!-- COMPONENT CHIP HTML -->
+                                              <span>
+                                                <span class="flex gap-1 text-green-700 bg-green-100 border border-green-600 rounded-full py-1 px-4 items-center lg:text-sm text-base">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                                    </svg>
+                                                    <span>Iscritto</span>
+                                                </span>
+                                              </span>
+
+                                        </div>
+                                        <div class="flex justify-start items-center gap-5 w-full flex-wrap h-1/2">
+                                            <!-- COMPONENT BUTTON HTML -->
+                                              <a class="btn btn-secondary" href="https://meet.google.com/">
+                                                Partecipa ora
+                                              </a>
+
+                                            <!-- COMPONENT BUTTON HTML -->
+                                              <a class="flex gap-2 items-center btn btn-primary" href="/events/1">
+                                                Visualizza l&#x27;evento
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="3"
+                                                    stroke="currentColor"
+                                                    class="w-4 h-4"
+                                                  >
+                                                    <path
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                                    />
+                                                  </svg>
+                                              </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COMPONENT CARDEVENT HTML -->
+                        <div id="event-my-2" class="w-full">
+                            <div class="w-full flex justify-start bg-white rounded-2xl border border-gray-400 max-h-[155px] ">
+                                <div class="w-auto hidden lg:flex">
+                                    <img src="../../assets/images/evento2.png" alt="Evento 2" class="h-auto min-w-[254px] max-w-[254px] rounded-2xl object-cover object-top" />
+                                </div>
+                                <div class="w-full flex gap-6 p-8">
+                                    <div class="flex-col justify-start items-start h-full">
+                                        <!-- COMPONENT FORMATDATE HTML -->
+                                          <div class="flex flex-col"><span class="monthContainer">Gen</span><span class="dayContainer">14</span></div>
+
+                                    </div>
+                                    <div class="flex flex-col w-full items-stretch gap-4 justify-between">
+                                        <div class="min-h-10 max-h-10 text-ellipsis overflow-hidden flex justify-between items-center">
+                                            <p class="text-2xl font-bold">
+                                                <!-- maxChar 100 -->
+                                                Conferenza Alumni Un nuovo modo di approcciarsi alla user Research
+                                            </p>
+                                            <!-- button iscrizione=true -->
+                                            <!-- COMPONENT CHIP HTML -->
+                                              <span>
+                                                <span class="flex gap-1 text-green-700 bg-green-100 border border-green-600 rounded-full py-1 px-4 items-center lg:text-sm text-base">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                                    </svg>
+                                                    <span>Iscritto</span>
+                                                </span>
+                                              </span>
+
+                                        </div>
+                                        <div class="flex justify-start items-center gap-5 w-full flex-wrap h-1/2">
+                                            <!-- COMPONENT BUTTON HTML -->
+                                              <a class="btn btn-secondary" href="https://meet.google.com/">
+                                                Partecipa ora
+                                              </a>
+
+                                            <!-- COMPONENT BUTTON HTML -->
+                                              <a class="flex gap-2 items-center btn btn-primary" href="/events/2">
+                                                Visualizza l&#x27;evento
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="3"
+                                                    stroke="currentColor"
+                                                    class="w-4 h-4"
+                                                  >
+                                                    <path
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                                    />
+                                                  </svg>
+                                              </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COMPONENT CARDEVENT HTML -->
+                        <div id="event-my-3" class="w-full">
+                            <div class="w-full flex justify-start bg-white rounded-2xl border border-gray-400 max-h-[155px] ">
+                                <div class="w-auto hidden lg:flex">
+                                    <img src="../../assets/images/evento1.png" alt="Evento 1" class="h-auto min-w-[254px] max-w-[254px] rounded-2xl object-cover object-top" />
+                                </div>
+                                <div class="w-full flex gap-6 p-8">
+                                    <div class="flex-col justify-start items-start h-full">
+                                        <!-- COMPONENT FORMATDATE HTML -->
+                                          <div class="flex flex-col"><span class="monthContainer">Gen</span><span class="dayContainer">14</span></div>
+
+                                    </div>
+                                    <div class="flex flex-col w-full items-stretch gap-4 justify-between">
+                                        <div class="min-h-10 max-h-10 text-ellipsis overflow-hidden flex justify-between items-center">
+                                            <p class="text-2xl font-bold">
+                                                <!-- maxChar 100 -->
+                                                Giornata dello Sport e del Benessere con atleti agonistici
+                                            </p>
+                                            <!-- button iscrizione=true -->
+                                            <!-- COMPONENT CHIP HTML -->
+                                              <span>
+                                                <span class="flex gap-1 text-green-700 bg-green-100 border border-green-600 rounded-full py-1 px-4 items-center lg:text-sm text-base">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                                    </svg>
+                                                    <span>Iscritto</span>
+                                                </span>
+                                              </span>
+
+                                        </div>
+                                        <div class="flex justify-start items-center gap-5 w-full flex-wrap h-1/2">
+                                            <!-- COMPONENT BUTTON HTML -->
+                                              <a class="btn btn-secondary" href="https://meet.google.com/">
+                                                Partecipa ora
+                                              </a>
+
+                                            <!-- COMPONENT BUTTON HTML -->
+                                              <a class="flex gap-2 items-center btn btn-primary" href="/events/3">
+                                                Visualizza l&#x27;evento
+                                                  <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="3"
+                                                    stroke="currentColor"
+                                                    class="w-4 h-4"
+                                                  >
+                                                    <path
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                                    />
+                                                  </svg>
+                                              </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Formazione</h4>
+                <ul class="flex flex-col gap-2 w-full">
+                    <li class="w-full border-b mb-5 flex gap-4 pb-6 flex-col xl:flex-row">
+                        <div class="w-1/12">
+                            <span class="block">
+                                <img src='../../assets/images/logo.png' alt='Università degli Studi di Trento' class='w-16 h-16 rounded-full max-h-16 max-w-16 object-cover object-left' />
+                            </span>
+                        </div>
+                        <div class="w-11/12 flex flex-col gap-2">
+                            <p class="font-medium text-base">Università degli studi di Trento</p>
+                            <p class="text-sm">Master di III livello in Giurista d’Impresa </p>
+                            <p class="text-xs text-primary">2014 - 2016</p>
+                        </div>
+                    </li>
+                    <li class="w-full border-b mb-5 flex gap-4 pb-6 flex-col xl:flex-row">
+                        <div class="w-1/12">
+                            <span class="block">
+                                <img src='../../assets/images/logo.png' alt='Università degli Studi di Trento' class='w-16 h-16 rounded-full max-h-16 max-w-16 object-cover object-left' />
+                            </span>
+                        </div>
+                        <div class="w-11/12 flex flex-col gap-2">
+                            <p class="font-medium text-base">Università degli studi di Trento</p>
+                            <p class="text-sm">Laurea magistrale a ciclo unico in Giurisprudenza</p>
+                            <p class="text-xs text-primary">2009 - 2014</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Competenze</h4>
+                <ul class="flex justify-between items-center gap-16 flex-wrap">
+                    <li class="flex flex-col items-start gap-2">
+                        <p>People management <span class="text-primary font-bold">9</span></p>
+                        <!-- COMPONENT AVATARLIST HTML -->
+                          <div class="avatar-container min-h-10">
+                            <img
+                              src="../../assets/images/avatar.png"
+                              alt="Avatar 1"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar2.png"
+                              alt="Avatar 2"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar3.png"
+                              alt="Avatar 3"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar4.png"
+                              alt="Avatar 4"
+                              class="single-small-avatar"
+                            />
+                              <span
+                                class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                              >+9</span>
+                          </div>
+
+                    </li>
+                    <li class="flex flex-col items-start gap-2">
+                        <p>Public speaking <span class="text-primary font-bold">6</span></p>
+                        <!-- COMPONENT AVATARLIST HTML -->
+                          <div class="avatar-container min-h-10">
+                            <img
+                              src="../../assets/images/avatar.png"
+                              alt="Avatar 1"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar2.png"
+                              alt="Avatar 2"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar3.png"
+                              alt="Avatar 3"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar4.png"
+                              alt="Avatar 4"
+                              class="single-small-avatar"
+                            />
+                              <span
+                                class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                              >+7</span>
+                          </div>
+
+                    </li>
+                    <li class="flex flex-col items-start gap-2">
+                        <p>Team work & Client-relation management <span class="text-primary font-bold">8</span></p>
+                        <!-- COMPONENT AVATARLIST HTML -->
+                          <div class="avatar-container min-h-10">
+                            <img
+                              src="../../assets/images/avatar.png"
+                              alt="Avatar 1"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar2.png"
+                              alt="Avatar 2"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar3.png"
+                              alt="Avatar 3"
+                              class="single-small-avatar"
+                            />
+                            <img
+                              src="../../assets/images/avatar4.png"
+                              alt="Avatar 4"
+                              class="single-small-avatar"
+                            />
+                              <span
+                                class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                              >+12</span>
+                          </div>
+
+                    </li>
+                </ul>
+                <a href="/profile/1/skills" class="text-primary">Visualizza tutti (17)</a>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Aree tematiche di interesse:</h4>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown('myDropdown1')">
+                        Arte
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+                        </svg>
+                    </button>
+                    <ul id="myDropdown1" class="dropdown-content">
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests1.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Pittura ad olio</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+32</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests2.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Body art</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+14</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests3.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Design</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+25</span>
+                              </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown('myDropdown2')">
+                        Sport
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+                        </svg>
+                    </button>
+                    <ul id="myDropdown2" class="dropdown-content">
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Tennis</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+15</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Ciclismo</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+16</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Macchine da corsa</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+37</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Calcio</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+27</span>
+                              </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown('myDropdown3')">
+                        Musica
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+                        </svg>
+                    </button>
+                    <ul id="myDropdown3" class="dropdown-content">
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Pop</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+9</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Jazz</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+7</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Rock</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+12</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Dance</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+12</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">HipPop</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+12</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Classica</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+12</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Trap</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+12</span>
+                              </div>
+
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Latina</p>
+                            <!-- COMPONENT AVATARLIST HTML -->
+                              <div class="avatar-container min-h-10">
+                                <img
+                                  src="../../assets/images/avatar.png"
+                                  alt="Avatar 1"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar2.png"
+                                  alt="Avatar 2"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar3.png"
+                                  alt="Avatar 3"
+                                  class="single-small-avatar"
+                                />
+                                <img
+                                  src="../../assets/images/avatar4.png"
+                                  alt="Avatar 4"
+                                  class="single-small-avatar"
+                                />
+                                  <span
+                                    class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+                                  >+12</span>
+                              </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <a href="/profile/1/interests" class="text-primary">Visualizza tutti (25)</a>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+
+<script>function toggleDropdown(o){var t=document.getElementById(o);t.classList.toggle("show")}function editProfile(){document.querySelector("#content-modal").classList.add("show-modal-edit"),document.querySelector("#backdrop-modal").classList.remove("modal-edit-deactive"),document.querySelector("#backdrop-modal").classList.add("modal-edit-active")}function closeEditProfile(){document.querySelector("#content-modal").classList.remove("show-modal-edit"),document.querySelector("#backdrop-modal").classList.add("modal-edit-deactive"),document.querySelector("#backdrop-modal").classList.remove("modal-edit-active")}function sendUpdate(o){o.preventDefault(),o.stopPropagation();const t={};o.target.querySelectorAll("textarea").forEach(e=>{t[e.name]=e.value}),o.target.querySelectorAll("input").forEach(e=>{t[e.name]=e.type==="radio"||e.type==="checkbox"?e.checked:e.value}),console.log(t),fetch("/profile/1",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)}).then(e=>e.json()).then(e=>{alert(`Update sent ${JSON.stringify(e)}`)}).catch(e=>{alert(`Error ${JSON.stringify(e)}`)}).finally(()=>{closeEditProfile()})}
+</script>
+
+  </body>
+</html>

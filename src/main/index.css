@@ -1,0 +1,7 @@
+/*GLOBAL CSS*/
+
+body {
+    @apply bg-gray-100 antialiased;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}

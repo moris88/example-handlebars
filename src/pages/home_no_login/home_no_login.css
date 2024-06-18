@@ -1,0 +1,58 @@
+/*HOME_NO_LOGIN CSS*/
+.box {
+    @apply flex flex-col justify-between w-auto bg-white border border-primary rounded-lg p-8 hover:bg-red-100 hover:cursor-pointer relative;
+}
+
+.icon-hidden {
+    @apply hidden absolute top-10 right-10;
+}
+
+.box:hover .icon-hidden {
+    @apply block;
+}
+
+.items-carousel {
+    @apply flex flex-row items-center w-auto overflow-hidden relative;
+}
+
+.item-carousel {
+    @apply transition-all duration-1000 ease-in-out min-h-[400px];
+}
+
+.carousel-hidden {
+    @apply opacity-0 absolute -z-40;
+}
+
+.carousel-show {
+    @apply opacity-100 block z-40;
+}
+
+.carousel-controls {
+    @apply relative;
+}
+
+.btn-carousel {
+    @apply absolute bottom-48 p-0 !rounded-full btn-primary opacity-10 hover:opacity-100
+}
+
+#prevBtn {
+    @apply -left-8;
+}
+
+#nextBtn {
+    @apply -right-8;
+}
+
+.carousel {
+    @apply flex flex-row items-center w-auto gap-10 overflow-hidden relative;
+}
+
+.carousel-track {
+    @apply flex gap-5;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(10%); }
+    100% { transform: translateX(-50%); }
+}

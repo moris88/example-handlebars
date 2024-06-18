@@ -1,0 +1,5 @@
+/*INPUT CSS*/
+
+.input-class {
+    @apply rounded-lg border border-solid border-gray-300 text-black p-3 outline-none required:border-l-2 required:border-l-red-400;
+}

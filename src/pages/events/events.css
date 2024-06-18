@@ -1,0 +1,8 @@
+/*EVENTS CSS*/
+.btn-filter {
+    @apply bg-white py-2 px-4 rounded-full border hover:border hover:border-primary;
+}
+
+.btn-filter-active {
+    @apply bg-red-100 text-primary py-2 px-4 rounded-full border border-primary;
+}

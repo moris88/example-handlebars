@@ -1,0 +1,4 @@
+/*CARDPROFILE CSS*/
+.li-card-profile {
+    @apply flex items-center gap-2;
+}

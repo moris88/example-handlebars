@@ -1,0 +1,252 @@
+{{#extend "index"}}
+{{#content "body"}}
+
+<!-- PAGE PROFILE HTML -->
+<div class="relative">
+{{> navbarComponent }}
+
+{{> modalEditProfileComponent name="Chiara Rossi" email="chiara.rossi@mail.com" }}
+
+<div class="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-6 mt-4">
+    {{> cardProfileComponent image=image name=name role=role phone=phone email=email info=info work=work
+        links=links onclick="editProfile()"}}
+    <section class="xl:col-span-4 md:col-span-2 col-span-1 flex flex-col gap-6">
+        <div class="w-full lg:mt-0 mt-6 flex flex-col gap-6">
+            <div class="flex flex-col lg:flex-row justify-between w-full bg-rose-50 border border-primary rounded-lg p-8">
+                <div class="lg:w-3/4 w-full">
+                    <p class="text-primary text-2xl font-bold">Ciao Chiara, completa il tuo profilo!</p>
+                    <p class="text-primary text-xl text-wrap">Inserisci i tuoi interessi e iscriviti ai gruppi che
+                        più ti interessano! Confronta le tue compatibilità e partecipa agli eventi del tuo gruppo.</p>
+                </div>
+                <div class="lg:w-1/4 w-full flex lg:flex-col flex-row justify-end items-end">
+                    {{> buttonComponent className="btn btn-secondary" text="Aggiorna il tuo profilo" onclick="editProfile()"}}
+                </div>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Descrizione</h4>
+                <p>{{description}}</p>
+            </div>
+            <div class="bg-white rounded-lg w-full flex justify-between gap-6 p-8">
+                <h4 class="font-bold inline">Elementi salvati</h4>
+                <a href="/profile/1/events_save" class="text-primary flex items-center gap-2">
+                    Visualizza (5)
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right text-black" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col">
+                <div class="w-full flex justify-between gap-6 px-8 py-8">
+                    <h4 class="font-bold">I tuoi prossimi eventi</h4>
+                    <a href="/profile/1/events" class="text-primary flex items-center gap-2">
+                        Visualizza (4)
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right text-black" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="px-8 pb-8 flex flex-col gap-6">
+                    {{#each events.subscribed as |event|}}
+                        {{> cardEventComponent size="small" horizontal=true image=event.image name=event.name date=event.date time=event.time location=event.location}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Formazione</h4>
+                <ul class="flex flex-col gap-2 w-full">
+                    {{#each formations as |formation|}}
+                    <li class="w-full border-b mb-5 flex gap-4 pb-6 flex-col xl:flex-row">
+                        <div class="w-1/12">
+                            <span class="block">
+                                <img src='{{formation.logo.src}}' alt='{{formation.logo.alt}}' class='w-16 h-16 rounded-full max-h-16 max-w-16 object-cover object-left' />
+                            </span>
+                        </div>
+                        <div class="w-11/12 flex flex-col gap-2">
+                            <p class="font-medium text-base">{{formation.name}}</p>
+                            <p class="text-sm">{{formation.title}}</p>
+                            <p class="text-xs text-primary">{{formation.startDateYear}} - {{formation.endDateYear}}</p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Competenze</h4>
+                <ul class="flex justify-between items-center gap-16 flex-wrap">
+                    <li class="flex flex-col items-start gap-2">
+                        <p>People management <span class="text-primary font-bold">9</span></p>
+                        {{> avatarListComponent type="small" number=9}}
+                    </li>
+                    <li class="flex flex-col items-start gap-2">
+                        <p>Public speaking <span class="text-primary font-bold">6</span></p>
+                        {{> avatarListComponent type="small" number=7}}
+                    </li>
+                    <li class="flex flex-col items-start gap-2">
+                        <p>Team work & Client-relation management <span class="text-primary font-bold">8</span></p>
+                        {{> avatarListComponent type="small" number=12}}
+                    </li>
+                </ul>
+                <a href="/profile/1/skills" class="text-primary">Visualizza tutti (17)</a>
+            </div>
+            <div class="bg-white rounded-lg w-full flex flex-col gap-6 p-8">
+                <h4 class="font-bold">Aree tematiche di interesse:</h4>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown('myDropdown1')">
+                        Arte
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+                        </svg>
+                    </button>
+                    <ul id="myDropdown1" class="dropdown-content">
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests1.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Pittura ad olio</p>
+                            {{> avatarListComponent type="small" number=32}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests2.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Body art</p>
+                            {{> avatarListComponent type="small" number=14}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests3.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Design</p>
+                            {{> avatarListComponent type="small" number=25}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown('myDropdown2')">
+                        Sport
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+                        </svg>
+                    </button>
+                    <ul id="myDropdown2" class="dropdown-content">
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Tennis</p>
+                            {{> avatarListComponent type="small" number=15}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Ciclismo</p>
+                            {{> avatarListComponent type="small" number=16}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Macchine da corsa</p>
+                            {{> avatarListComponent type="small" number=37}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Calcio</p>
+                            {{> avatarListComponent type="small" number=27}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown('myDropdown3')">
+                        Musica 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+                        </svg>
+                    </button>
+                    <ul id="myDropdown3" class="dropdown-content">
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Pop</p>
+                            {{> avatarListComponent type="small" number=9}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Jazz</p>
+                            {{> avatarListComponent type="small" number=7}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Rock</p>
+                            {{> avatarListComponent type="small" number=12}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Dance</p>
+                            {{> avatarListComponent type="small" number=12}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">HipPop</p>
+                            {{> avatarListComponent type="small" number=12}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Classica</p>
+                            {{> avatarListComponent type="small" number=12}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Trap</p>
+                            {{> avatarListComponent type="small" number=12}}
+                        </li>
+                        <li class="flex flex-col items-start gap-2">
+                            <div class="min-h-44 min-w-44 max-h-44 max-w-44 rounded-lg object-cover overflow-hidden">
+                                <img src="../../assets/images/interests.png" alt=""
+                                    class="h-full w-full rounded-lg object-cover">
+                            </div>
+                            <p class=" whitespace-nowrap">Latina</p>
+                            {{> avatarListComponent type="small" number=12}}
+                        </li>
+                    </ul>
+                </div>
+                <a href="/profile/1/interests" class="text-primary">Visualizza tutti (25)</a>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+<script />
+{{/content}}
+{{/extend}}

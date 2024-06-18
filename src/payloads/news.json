@@ -1,0 +1,179 @@
+{
+    "evidence_primary": {
+        "id": 1,
+        "name": "news-evidence-1",
+        "image": {
+            "src": "../../assets/images/news1.png",
+            "alt": "News 1"
+        },
+        "title": "Alumni Spotlight: Successi e Storie Ispiratrici",
+        "tags": [
+            "News"
+        ],
+        "date": "03/04/2024",
+        "time": "11:32",
+        "lecture_time": "13 min di lettura",
+        "author": "Chiara Rossi",
+        "description": "In questa edizione speciale, mettiamo in luce alcuni dei nostri brillanti Alumni e Alumnae che stanno facendo grandi cose nel loro campo. Dalle imprese imprenditoriali alle carriere accademiche, queste storie sono fonte di ispirazione per tutti noi. Leggi le loro esperienze, scopri i loro successi e lasciati motivare dalle loro conquiste straordinarie.Clicca qui per leggere di più e lasciati ispirare dalle storie dei nostri Alumni e Alumnae di spicco! loremsd asd asij doasjd asjd lkajs lkdjas als djaslkj dlaksjd laksj dlaskj daskdj alksj dpasujd ajs dlkjaspd uapsduiudo0qwudo jasoi daiosu doaisu doaius daisu doiajsd asuj duasoidu aosd Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate sint laudantium omnis ipsum recusandae voluptates provident harum ex quis, velit, veniam, perspiciatis deserunt unde hic eveniet beatae! Quos, laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate sint laudantium omnis ipsum recusandae voluptates provident harum ex quis, velit, veniam, perspiciatis deserunt unde hic eveniet beatae! Quos, laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate sint laudantium omnis ipsum recusandae voluptates provident harum ex quis, velit, veniam, perspiciatis deserunt unde hic eveniet beatae! Quos, laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate sint laudantium omnis ipsum recusandae voluptates provident harum ex quis, velit, veniam, perspiciatis deserunt unde hic eveniet beatae! Quos, laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate sint laudantium omnis ipsum recusandae voluptates provident harum ex quis, velit, veniam, perspiciatis deserunt unde hic eveniet beatae! Quos, laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate sint laudantium omnis ipsum recusandae voluptates provident harum ex quis, velit, veniam, perspiciatis deserunt unde hic eveniet beatae! Quos, laudantium.",
+        "favorite": true,
+        "href": "/news/1"
+    },
+    "evidence": [
+        {
+            "id": 2,
+            "name": "news-evidence-2",
+            "image": {
+                "src": "../../assets/images/news2.png",
+                "alt": "News 2"
+            },
+            "title": "Guida al Prestito per Merito: cos’è e come funziona",
+            "tags": [
+                "News studenti"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Di Mario Rossi",
+            "description": "Per Prestito per Merito si intende un finanziamento caratterizzato da favorevoli condizioni di rimborso e da un accesso semplificato al capitale. È detto così perché viene erogato sulla base di un impegno morale: portare a termine un determinato progetto.",
+            "favorite": true,
+            "href": "/news/1"
+        },
+        {
+            "id": 3,
+            "name": "news-evidence-3",
+            "image": {
+                "src": "../../assets/images/news3.png",
+                "alt": "News 3"
+            },
+            "title": "Perchè formarsi con un corso di Intelligenza Artificiale?",
+            "tags": [
+                "Business Innovation"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Chiara Rossi",
+            "description": "Frequentare un corso di Intelligenza Artificiare non è solo un'opportunità per acquisire conoscenze teoriche, ma fornisce anche una solida base pratica che può essere applicata direttamente nel contesto aziendale e nel business di tutti i giorni.",
+            "favorite": false,
+            "href": "/news/3"
+        }
+    ],
+    "recommended": [
+        {
+            "id": 1,
+            "name": "news-evidence-1",
+            "image": {
+                "src": "../../assets/images/news1.png",
+                "alt": "News 1"
+            },
+            "title": "Alumni Spotlight:Successi e Storie Ispiratrici",
+            "tags": [
+                "News"
+            ],
+            "date": "03/04/2024",
+            "time": "11:32",
+            "lecture_time": "13 min di lettura",
+            "author": "Chiara Rossi",
+            "description": "In questa edizione speciale, mettiamo in luce alcuni dei nostri brillanti Alumni e Alumnae che stanno facendo grandi cose nel loro campo. Dalle imprese imprenditoriali alle carriere accademiche, queste storie sono fonte di ispirazione per tutti noi. Leggi le loro esperienze, scopri i loro successi e lasciati motivare dalle loro conquiste straordinarie.Clicca qui per leggere di più e lasciati ispirare dalle storie dei nostri Alumni e Alumnae di spicco!",
+            "favorite": true,
+            "href": "/news/1"
+        },
+        {
+            "id": 2,
+            "name": "news-evidence-2",
+            "image": {
+                "src": "../../assets/images/news2.png",
+                "alt": "News 2"
+            },
+            "title": "Guida al Prestito per Merito: cos’è e come funziona",
+            "tags": [
+                "News studenti"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Di Mario Rossi",
+            "description": "Per Prestito per Merito si intende un finanziamento caratterizzato da favorevoli condizioni di rimborso e da un accesso semplificato al capitale. È detto così perché viene erogato sulla base di un impegno morale: portare a termine un determinato progetto.",
+            "favorite": true,
+            "href": "/news/2"
+        },
+        {
+            "id": 3,
+            "name": "news-evidence-3",
+            "image": {
+                "src": "../../assets/images/news3.png",
+                "alt": "News 3"
+            },
+            "title": "Perchè formarsi con un corso di Intelligenza Artificiale?",
+            "tags": [
+                "Business Innovation"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Chiara Rossi",
+            "description": "Frequentare un corso di Intelligenza Artificiare non è solo un'opportunità per acquisire conoscenze teoriche, ma fornisce anche una solida base pratica che può essere applicata direttamente nel contesto aziendale e nel business di tutti i giorni.",
+            "favorite": true,
+            "href": "/news/3"
+        }
+    ],
+    "all": [
+        {
+            "id": 1,
+            "name": "news-evidence-1",
+            "image": {
+                "src": "../../assets/images/news1.png",
+                "alt": "News 1"
+            },
+            "title": "Alumni Spotlight:Successi e Storie Ispiratrici",
+            "tags": [
+                "News"
+            ],
+            "date": "03/04/2024",
+            "time": "11:32",
+            "lecture_time": "13 min di lettura",
+            "author": "Chiara Rossi",
+            "description": "In questa edizione speciale, mettiamo in luce alcuni dei nostri brillanti Alumni e Alumnae che stanno facendo grandi cose nel loro campo. Dalle imprese imprenditoriali alle carriere accademiche, queste storie sono fonte di ispirazione per tutti noi. Leggi le loro esperienze, scopri i loro successi e lasciati motivare dalle loro conquiste straordinarie.Clicca qui per leggere di più e lasciati ispirare dalle storie dei nostri Alumni e Alumnae di spicco!",
+            "favorite": true,
+            "href": "/news/1"
+        },
+        {
+            "id": 2,
+            "name": "news-evidence-2",
+            "image": {
+                "src": "../../assets/images/news2.png",
+                "alt": "News 2"
+            },
+            "title": "Guida al Prestito per Merito: cos’è e come funziona",
+            "tags": [
+                "News studenti"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Di Mario Rossi",
+            "description": "Per Prestito per Merito si intende un finanziamento caratterizzato da favorevoli condizioni di rimborso e da un accesso semplificato al capitale. È detto così perché viene erogato sulla base di un impegno morale: portare a termine un determinato progetto.",
+            "favorite": true,
+            "href": "/news/2"
+        },
+        {
+            "id": 3,
+            "name": "news-evidence-3",
+            "image": {
+                "src": "../../assets/images/news3.png",
+                "alt": "News 3"
+            },
+            "title": "Perchè formarsi con un corso di Intelligenza Artificiale?",
+            "tags": [
+                "Business Innovation"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Chiara Rossi",
+            "description": "Frequentare un corso di Intelligenza Artificiare non è solo un'opportunità per acquisire conoscenze teoriche, ma fornisce anche una solida base pratica che può essere applicata direttamente nel contesto aziendale e nel business di tutti i giorni.",
+            "favorite": true,
+            "href": "/news/3"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{{> index}}
+
+<!-- PAGE PROFILE_EVENTS HTML -->
+<div class="relative">
+{{> navbarComponent }}
+
+<div class="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-6 mt-4">
+    <section class="mb-6 lg:mb-0">
+        {{> cardProfileComponent image=image name=name role=role phone=phone email=email info=info work=work
+        links=links}}
+    </section>
+    <section class="xl:col-span-4 md:col-span-2 col-span-1 flex flex-col gap-6">
+        <div class="bg-white rounded-lg w-full flex flex-col p-8 gap-6">
+            <div class="w-full py-6">
+                <a href="/profile/1" class="w-full flex justify-start items-center gap-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
+                    <p class="font-semibold text-base">I tuoi prossimi eventi</p>
+                </a>
+            </div>
+            {{#each events.subscribed as |event|}}
+                {{> cardEventComponent size="small" image=event.image name=event.name date=event.date time=event.time location=event.location}}
+            {{/each}}
+        </div>
+    </section>
+</div>
+</div>

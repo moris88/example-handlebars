@@ -1,0 +1,299 @@
+{{#extend "index"}}
+{{#content "body"}}
+
+<!-- PAGE HOME HTML -->
+<div class="relative">
+    {{> navbarComponent }}
+
+    <section class="min-h-[600px] max-h-[600px] p-10 rounded-b-lg bg-white relative">
+        <div class="items-carousel relative w-full h-auto overflow-hidden">
+            {{#each carousel as |item|}}
+            <div class="item-carousel carousel-hidden">
+                <div class="flex items-stretch w-full">
+                    <div class="lg:w-1/2 w-full h-full flex flex-col items-stretch justify-stretch gap-4 p-10">
+                        <div class="flex flex-wrap">
+                            {{#each item.tags as |tag|}}
+                            {{> chipComponent text=tag}}
+                            {{/each}}
+                        </div>
+                        <h3 class="text-4xl text-primary">{{item.title}}</h3>
+                        <p><span class="font-semibold">{{item.formatDate}}</p>
+                        <p class="font-medium">{{item.description}}</p>
+                        <div class="flex justify-start items-center gap-5 w-full">
+                            {{#if (equal item.type "event")}}
+                            {{> buttonComponent anchor="true" className="btn btn-primary" text="Visualizza l'evento"
+                            href=item.href}}
+                            {{else}}
+                            {{> buttonComponent anchor="true" className="btn btn-primary" text="Continua a leggere"
+                            href=item.href}}
+                            {{/if}}
+
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 lg:flex hidden min-h-[500px] max-h-[500px]">
+                        <img src="{{item.image.src}}" alt="{{item.image.alt}}" class="h-full w-full rounded-lg" />
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <!-- Navigazione Carousel -->
+        <div class="carousel-controls">
+            <button id="prevBtn" class="btn-carousel"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button id="nextBtn" class="btn-carousel"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+    </section>
+    <section class="p-10">
+        <div class="flex justify-between w-full bg-rose-50 border border-primary rounded-lg p-8">
+            <div class="w-3/4">
+                <p class="text-primary text-2xl font-bold">Ciao Chiara, completa il tuo profilo!</p>
+                <p class="text-primary text-xl text-wrap">Inserisci i tuoi interessi e iscriviti ai gruppi che
+                    più ti interessano! Confronta le tue compatibilità e partecipa agli eventi del tuo gruppo.</p>
+            </div>
+            <div class="w-1/4 flex flex-col justify-end items-end">
+                {{> buttonComponent anchor="true" href="/profile/1" className="btn btn-secondary" text="Aggiorna
+                il tuo profilo"}}
+            </div>
+        </div>
+    </section>
+    <section class="p-8 flex flex-col gap-6">
+        <p class="font-bold text-[40px] text-center">Scopri il portale con i tuoi contenuti personalizzati</p>
+        <div class="w-full flex justify-center gap-6">
+            <a class="box" href="/directory/alumni">
+                <span class="icon-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </span>
+                <span class="text-primary max-w-14">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                        stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                    </svg>
+                </span>
+                <p class="text-[40px] font-bold">150 Alumni iscritti</p>
+                <p class="text-4xl">ogni anno</p>
+            </a>
+            <a class="box" href="events">
+                <span class="icon-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </span>
+                <span class="text-primary max-w-14">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                    </svg>
+                </span>
+                <p class="text-[40px] font-bold">180 eventi</p>
+                <p class="text-4xl">ogni anno</p>
+            </a>
+            <a class="box" href="/news">
+                <span class="icon-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </span>
+                <span class="text-primary max-w-14">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                    </svg>
+                </span>
+                <p class="text-[40px] font-bold">45 news</p>
+                <p class="text-4xl">ogni settimana</p>
+            </a>
+        </div>
+        <div class="w-full flex justify-center gap-6">
+            <a class="box" href="/bandiEpremi">
+                <span class="icon-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </span>
+                <span class="text-primary max-w-14">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                </span>
+                <p class="text-[40px] font-bold">50 Bandi e premi dedicati</p>
+                <p class="text-4xl">ogni anno</p>
+            </a>
+            <a class="box" href="/mentoring-program">
+                <span class="icon-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </span>
+                <span class="text-primary max-w-14">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 0 1 3.15 0v1.5m-3.15 0 .075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 0 1 3.15 0V15M6.9 7.575a1.575 1.575 0 1 0-3.15 0v8.175a6.75 6.75 0 0 0 6.75 6.75h2.018a5.25 5.25 0 0 0 3.712-1.538l1.732-1.732a5.25 5.25 0 0 0 1.538-3.712l.003-2.024a.668.668 0 0 1 .198-.471 1.575 1.575 0 1 0-2.228-2.228 3.818 3.818 0 0 0-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0 1 16.35 15m.002 0h-.002" />
+                    </svg>
+                </span>
+                <p class="text-[40px] font-bold">30 Alumni Mentor</p>
+                <p class="text-4xl">ogni edizione Mentor</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="mt-10 py-20 border-y border-primary bg-red-100 h-auto">
+        <p class="text-4xl font-bold text-center my-10">Scopri la tua community di Alumni</p>
+        <div class="flex items-center justify-center w-full my-10">{{> buttonComponent anchor="true"
+            className="btn btn-primary flex items-center gap-4" next="true" text="Scopri la Directory"
+            href="/directory/alumni"}}</div>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                {{#each alumni as |alumno|}}
+                {{> cardAlumnoComponent alumno=alumno }}
+                {{/each}}
+            </div>
+            <div class="carousel-track">
+                {{#each alumni as |alumno|}}
+                {{> cardAlumnoComponent alumno=alumno }}
+                {{/each}}
+            </div>
+            <div class="carousel-track">
+                {{#each alumni as |alumno|}}
+                {{> cardAlumnoComponent alumno=alumno }}
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    <section class="px-8 w-full mt-10">
+        <!-- I MIEI EVENTI-->
+        <div class="flex justify-between items-center border-b border-b-black my-12">
+            <span class="text-4xl font-bold py-3">
+                I miei eventi
+            </span>
+            <span class="flex gap-2 items-center h-full">
+                <span id="prev-pagination-my" onclick="prevMy(event)">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                    </svg>
+                </span>
+                <input id="pagination-my" value="1" type="text" class="hidden" />
+                <span id="next-pagination-my" onclick="nextMy(event)">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                    </svg>
+                </span>
+                <span>
+                    {{> buttonComponent type="secondary" className="btn btn-secondary" text="vedi
+                    tutti" href="/events/my/all" anchor="true" }}
+                </span>
+            </span>
+        </div>
+        {{#each events.my as |item|}}
+        {{> cardEventComponent id=item.id name=item.name horizontal="true" tags=item.tags image=item.image date=date
+        title=item.title
+        description=item.description subscribed=item.subscribed href=item.href id=item.id favorite=item.favorite
+        link=item.link}}
+        {{/each}}
+    </section>
+    <section class="px-8 w-full mt-10">
+        <div class="w-full flex items-center justify-between pb-6 border-b border-b-black">
+            <div class="w-full">
+                <p class="font-bold text-4xl mb-4">Eventi consigliati per te</p>
+            </div>
+            <div class="flex items-center justify-between" <!-- button pagina precedente -->
+                <button disabled class="text-primary disabled:text-gray-300" type="button">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                    </svg>
+                </button>
+                <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                    <!-- corrente/totale pagine -->
+                    <strong class="text-primary whitespace-nowrap">1/10</strong>
+                </p>
+                <!-- button pagina successiva -->
+                <button class="text-primary disabled:text-gray-300" type="button">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="w-full flex gap-20 flex-col lg:flex-row overflow-y-auto my-10">
+            {{#each events.recommended as |item|}}
+            {{> cardEventComponent tags=item.tags image=item.image date=date title=item.title
+            description=item.description subscribed=item.subscribed href=item.href id=item.id
+            favorite=item.favorite}}
+            {{/each}}
+        </div>
+    </section>
+    <section class="px-8 w-full mt-10">
+        <div class="flex items-center border-b border-b-black mt-12 mb-6">
+            <span class="text-4xl font-bold py-3">
+                I tuoi Bandi e Premi
+            </span>
+        </div>
+        <div>
+            TODO: Inserire qui i bandi e premi dell'utente
+        </div>
+    </section>
+    <section class="px-8 w-full mt-10">
+        <div class="flex items-center border-b border-b-black mt-12 mb-6">
+            <span class="text-4xl font-bold py-3">
+                News in evidenza
+            </span> 
+        </div>
+        <div class="flex flex-col xl:flex-row items-stretch gap-12 h-full">
+            {{> cardNewsComponent id=news.evidence_primary.id tags=news.evidence_primary.tags image=news.evidence_primary.image date=news.evidence_primary.date time=news.evidence_primary.time title=news.evidence_primary.title description=news.evidence_primary.description subscribed=news.evidence_primary.subscribed href=news.evidence_primary.href id=news.evidence_primary.id favorite=news.evidence_primary.favorite author=news.evidence_primary.author lecture_time=news.evidence_primary.lecture_time}}
+            <div class="flex flex-col gap-12">
+                {{#each news.evidence as |item|}}
+                    {{> cardNewsComponent id=item.name horizontal="true" tags=item.tags image=item.image date=date title=item.title
+                    description=item.description subscribed=item.subscribed href=item.href id=item.id favorite=item.favorite author=item.author lecture_time=item.lecture_time time=evidence_primary.time}}
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    <section class="p-10">
+        <div class="flex justify-between w-full bg-rose-50 border border-primary rounded-lg p-8">
+            <div class="w-3/4">
+                <p class="text-primary text-2xl font-bold">Entra a far parte del nostro programma di mentoring per
+                    Alumni e Alumnae!</p>
+                <p class="text-primary text-xl text-wrap">Unisciti a una rete di connessioni, condividi esperienze e
+                    ispira le future generazioni. <a href="#" class=" hover:underline hover:decoration-primary">Clicca
+                        qui</a> per saperne di più e diventa mentore oggi stesso!</p>
+            </div>
+            <div class="w-1/4 flex flex-col justify-end items-end">
+                {{> buttonComponent anchor="true" href="/mentoring-program" className="btn btn btn-secondary flex items-center gap-2" text="Scopri di più" next="true"}}
+            </div>
+        </div>
+    </section>
+</div>
+
+<script />
+
+{{/content}}
+{{/extend}}

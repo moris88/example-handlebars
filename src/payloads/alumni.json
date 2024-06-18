@@ -1,0 +1,347 @@
+{
+    "filters": {
+        "Name": {
+            "name": "Name",
+            "options": [
+                "Chiara Rossi",
+                "Marco Rossi",
+                "Luca Bianchi",
+                "Maria Esposito",
+                "Francesca Romano",
+                "Antonio Ricci",
+                "Giulia Ferrara",
+                "Giovanni Conti"
+            ]
+        },
+        "Graduated": {
+            "name": "Graduated",
+            "options": [
+                "Laurea triennale",
+                "Laurea magistrale",
+                "Laurea a ciclo unico",
+                "Master",
+                "Dottorato"
+            ]
+        },
+        "Year": {
+            "name": "Year",
+            "options": [
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2023",
+                "2024"
+            ]
+        },
+        "Course": {
+            "name": "Course",
+            "options": [
+                "Giurisprudenza",
+                "Economia",
+                "Ingegneria",
+                "Medicina",
+                "Lettere",
+                "Scienze Politiche",
+                "Scienze della Comunicazione",
+                "Scienze della Formazione",
+                "Scienze della Salute",
+                "Scienze della Sicurezza",
+                "Scienze della Terra",
+                "Scienze della Vita",
+                "Scienze Economiche",
+                "Scienze Politiche",
+                "Scienze Sociali",
+                "Scienze Umanistiche",
+                "Scienze dell'Informazione"
+            ]
+        },
+        "Location": {
+            "name": "Location",
+            "options": [
+                "Roma, (RM)",
+                "Roma Trastevere, (RM)",
+                "Roma Tiburtina, (RM)",
+                "Roma Termini, (RM)",
+                "Roma Ostiense, (RM)",
+                "Rocca di Papa, (RM)",
+                "Rocca Priora, (RM)",
+                "Rimini, (RN)"
+            ]
+        }
+    },
+    "alumno": {
+        "image": {
+            "src": "../../assets/images/avatar1.png",
+            "alt": "Avatar1"
+        },
+        "name": "Chiara Rossi",
+        "role": "Mentor",
+        "city": "Trento",
+        "links": {
+            "linkedin": "https://www.linkedin.com/"
+        },
+        "course_of_study": [
+            {
+                "department": "Diritto legale - amministrativo",
+                "graduated": "Master di II livello",
+                "year": "2019"
+            },
+            {
+                "department": "Giurisprudenza (LMG-01)",
+                "graduated": "Laurea magistrale biennale",
+                "year": "2018"
+            },
+            {
+                "department": "Scienze politiche (LMG-01)",
+                "graduated": "Laurea triennale",
+                "year": "2015"
+            }
+        ]
+    },
+    "alumni": [
+        {
+            "image": {
+                "src": "../../assets/images/avatar1.png",
+                "alt": "Avatar1"
+            },
+            "name": "Chiara Rossi",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Marco Rossi",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Luca Bianchi",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Maria Esposito",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Francesca Romano",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Antonio Ricci",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "notable": true,
+            "name": "Giulia Ferrara",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "year_of_graduated": "2018",
+            "profession": "Avvocato",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Master di || livello",
+                "graduated": "Diritto legale e amministrativo",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Giovanni Conti",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        }
+    ]
+}

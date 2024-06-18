@@ -1,0 +1,58 @@
+<!-- COMPONENT MULTIAUTOCOMPLETE HTML -->
+<div
+  class="{{className}}"
+>
+  <div class="flex items-center w-auto gap-2">
+    <input
+      class="bg-transparent outline-none multiautocomplete-input w-full"
+      id="{{name}}-multiautocomplete-input"
+      name="{{name}}"
+      type="text"
+      placeholder="{{placeholder}}"
+      oninput="multiautocompleteSearch(event, '{{name}}')"
+      onclick="multiautocompleteSearch(event, '{{name}}')"
+    />
+    {{#if (equal type "search")}}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        class="cursor-pointer bi bi-search w-4 h-4 min-w-4"
+        viewBox="0 0 16 16"
+        onclick="multiautocompleteSearch(event, '{{name}}')"
+      >
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+        />
+      </svg>
+    {{else}}
+      <svg class='cursor-pointer w-5 h-5 min-w-5' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd'
+          d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+          clip-rule='evenodd'></path>
+      </svg>
+    {{/if}}
+  </div>
+  {{#if top}}
+  <ul class="multiautocomplete-content noshow !-top-52 min-h-52" id="{{name}}">
+  {{else}}
+  <ul class="multiautocomplete-content noshow" id="{{name}}">
+  {{/if}}
+    <li
+      class="cursor-pointer hover:bg-red-100 flex w-full gap-1 rounded-lg p-1"
+      onclick="multiautocompleteSearchClick(event, '{{name}}', '', '{{classNameElement}}')"
+    >-NONE-</li>
+    {{#each items as |item|}}
+      <li
+        class="multiautocomplete-element {{../name}}-multiautocomplete-element"
+        onclick="multiautocompleteSearchClick(event, '{{../name}}', '{{item}}', '{{../classNameElement}}')"
+      >
+        <input type="checkbox" class="accent-primary" name="{{item}}" />
+        <label class="cursor-pointer" for="{{item}}">
+          {{item}}
+        </label>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<script />

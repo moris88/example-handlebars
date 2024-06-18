@@ -1,0 +1,125 @@
+{{#extend "index"}}
+{{#content "body"}}
+
+<!-- PAGE DIRECTORY_NOTABLES HTML -->
+<div class="relative">
+    {{> navbarComponent }}
+
+    {{> modalAlumnoComponent alumno=alumno }}
+
+    <div class="lg:px-20 px-2">
+        <section class="flex flex-col justify-center items-center gap-6 py-20">
+            <!-- il valore 35 deve essere la somma dei notables  -->
+            <p class="inline-block text-secondary bg-red-200 border border-primary rounded-full px-6 py-3">
+                Più di 35 Notables nel mondo</p>
+            <p class="text-center font-bold text-4xl loading-10">Notables</p>
+            <p class="text-center font-normal text-2xl text-wrap inline lg:w-6/12 w-full">Esplora gli alumni di spicco
+                dell’Università di Trento che hanno lasciato un'impronta indelebile con le loro brillanti carriere
+                post-universitarie.</p>
+        </section>
+
+        <section class="flex flex-col gap-6">
+            <div class="flex justify-between items-center border-b border-b-black">
+                <span class="text-4xl font-bold py-3">
+                    Alumni notables
+                </span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 w-full items-center gap-4">
+                <div class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" type="search" name=filters.Name.name placeholder="Cerca per nome"
+                    items=filters.Name.options }}
+                </div>
+                <div class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" name=filters.Graduated.name placeholder="Titoli di studio"
+                    items=filters.Graduated.options }}
+                </div>
+                <dic class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" name=filters.Year.name placeholder="Anno di laurea"
+                    items=filters.Year.options}}
+                </dic>
+                <div class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" type="search" name=filters.Course.name placeholder="Corso di laurea"
+                    items=filters.Course.options}}
+                </div>
+                <div class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" type="search" name=filters.Location.name placeholder="Location"
+                    items=filters.Location.options}}
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4 flex-wrap">
+                    <p><span class="text-primary">24</span> risultati</p>
+                    <ul class="flex gap-2" id="list-filters">
+
+                    </ul>
+                    {{> buttonComponent anchor="true" href="/directory/notables" className="btn btn-secondary" text="Reset filtri"}}
+                </div>
+                <div class="flex items-center justify-between" <!-- button pagina precedente -->
+                    <button disabled class="text-primary disabled:text-gray-300" type="button">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                        </svg>
+                    </button>
+                    <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                        <!-- corrente/totale pagine -->
+                        <strong class="text-primary whitespace-nowrap">1/10</strong>
+                    </p>
+                    <!-- button pagina successiva -->
+                    <button class="text-primary disabled:text-gray-300" type="button">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 py-6">
+                {{#each alumni as |alumno|}}
+                {{> cardAlumnoComponent alumno=alumno }}
+                {{/each}}
+            </div>
+            <!-- PAGINATION -->
+            <div class="w-full flex justify-center items-center gap-2">
+                <!-- button pagina precedente -->
+                <button disabled class="text-primary disabled:text-gray-300" type="button">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                    </svg>
+                </button>
+                <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                    <!-- corrente/totale pagine -->
+                    <strong class="text-primary whitespace-nowrap">1/10</strong>
+                </p>
+                <!-- button pagina successiva -->
+                <button class="text-primary disabled:text-gray-300" type="button">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                        stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                        <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section class="w-full">
+            <div class="flex items-center border-b border-b-black mt-12 mb-6">
+                <span class="text-4xl font-bold py-3">
+                    News dedicate ai Notables
+                </span>
+            </div>
+            <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-6 justify-stretch">
+                {{> cardNewsComponent id=news.evidence_primary.id tags=news.evidence_primary.tags image=news.evidence_primary.image date=news.evidence_primary.date time=news.evidence_primary.time title=news.evidence_primary.title description=news.evidence_primary.description subscribed=news.evidence_primary.subscribed href=news.evidence_primary.href id=news.evidence_primary.id favorite=news.evidence_primary.favorite author=news.evidence_primary.author lecture_time=news.evidence_primary.lecture_time}}
+                <div class="col-span-2 flex flex-col gap-2 mt-6 xl:mt-0 justify-stretch">
+                    {{#each news.evidence as |item|}}
+                    {{> cardNewsComponent id=item.name horizontal="true" tags=item.tags image=item.image date=date title=item.title
+                    description=item.description subscribed=item.subscribed href=item.href id=item.id favorite=item.favorite author=item.author lecture_time=item.lecture_time time=evidence_primary.time}}
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script />
+{{/content}}
+{{/extend}}

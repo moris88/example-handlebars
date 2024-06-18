@@ -1,0 +1,74 @@
+<!-- COMPONENT AVATARLIST HTML -->
+{{#if (equal type "small")}}
+  <div class="avatar-container min-h-10">
+    <img
+      src="../../assets/images/avatar.png"
+      alt="Avatar 1"
+      class="single-small-avatar"
+    />
+    <img
+      src="../../assets/images/avatar2.png"
+      alt="Avatar 2"
+      class="single-small-avatar"
+    />
+    <img
+      src="../../assets/images/avatar3.png"
+      alt="Avatar 3"
+      class="single-small-avatar"
+    />
+    <img
+      src="../../assets/images/avatar4.png"
+      alt="Avatar 4"
+      class="single-small-avatar"
+    />
+    {{#if number}}
+      <span
+        class="single-small-avatar text-xs font-semibold text-white bg-primary flex items-center justify-center"
+      >+{{number}}</span>
+    {{else}}
+      {{#if subscribers}}
+        <span class="pl-32">
+          <b>+{{subscribers}}</b>
+          partecipanti
+        </span>
+      {{/if}}
+    {{/if}}
+  </div>
+{{else}}
+  <div class="avatar-container min-h-10">
+    <img
+      src="../../assets/images/avatar.png"
+      alt="Avatar 1"
+      class="single-avatar"
+    />
+    <img
+      src="../../assets/images/avatar2.png"
+      alt="Avatar 2"
+      class="single-avatar"
+    />
+    <img
+      src="../../assets/images/avatar3.png"
+      alt="Avatar 3"
+      class="single-avatar"
+    />
+    <img
+      src="../../assets/images/avatar4.png"
+      alt="Avatar 4"
+      class="single-avatar"
+    />
+    {{#if number}}
+      <span class="pl-32"><b>+{{number}}</b>
+        Alumni/ae si sono già iscritti
+      </span>
+    {{else}}
+      {{#if subscribers}}
+        <span class="pl-32">
+          <b>+{{subscribers}}</b>
+          partecipanti
+        </span>
+      {{/if}}
+    {{/if}}
+  </div>
+{{/if}}
+
+<script />

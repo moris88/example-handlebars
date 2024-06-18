@@ -1,0 +1,13 @@
+/*MODALALUMNO CSS*/
+.modal {
+  @apply fixed right-0 inset-0 grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm;
+}
+.modal-deactive {
+  @apply hidden;
+}
+.modal-active {
+  @apply block z-[100];
+}
+.show-modal {
+  @apply md:w-full w-auto h-auto z-50 opacity-100;
+}

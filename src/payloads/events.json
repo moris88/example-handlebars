@@ -1,0 +1,272 @@
+{
+    "primary": {
+        "id": 3,
+        "image": {
+            "src": "../../assets/images/evento3.png",
+            "alt": "Evento 3"
+        },
+        "title": "Webinar Carriera",
+        "platform": "Zoom",
+        "tags": [
+            "Evento online"
+        ],
+        "date": "10-01-2024",
+        "startAt": "14:00",
+        "endAt": "16:00",
+        "description": "Esperti del settore condividono consigli sulla crescita professionale, cambiamenti di carriera e sviluppo personale. Gli alumni possono partecipare, porre domande e connettersi con professionisti di successo.",
+        "favorite": false,
+        "href": "/events/3"
+    },
+    "my": [
+        {
+            "id": 1,
+            "name": "event-my-1",
+            "image": {
+                "src": "../../assets/images/evento1.png",
+                "alt": "Evento 1"
+            },
+            "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "14/01/2024",
+            "startAt": "14:00",
+            "endAt": "16:00",
+            "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+            "favorite": true,
+            "subscribed": true,
+            "link": "https://meet.google.com/",
+            "href": "/events/1"
+        },
+        {
+            "id": 2,
+            "name": "event-my-2",
+            "image": {
+                "src": "../../assets/images/evento2.png",
+                "alt": "Evento 2"
+            },
+            "title": "Conferenza Alumni Un nuovo modo di approcciarsi alla user Research",
+            "platform": "Zoom",
+            "tags": [
+                "Evento online",
+                "Solo per Alumni/e"
+            ],
+            "date": "14/01/2024",
+            "startAt": "14:00",
+            "endAt": "16:00",
+            "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+            "favorite": true,
+            "subscribed": true,
+            "link": "https://meet.google.com/",
+            "href": "/events/2"
+        },
+        {
+            "id": 3,
+            "name": "event-my-3",
+            "image": {
+                "src": "../../assets/images/evento1.png",
+                "alt": "Evento 1"
+            },
+            "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "14/01/2024",
+            "startAt": "14:00",
+            "endAt": "16:00",
+            "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform.",
+            "favorite": true,
+            "subscribed": true,
+            "link": "https://meet.google.com/",
+            "href": "/events/3"
+        }
+    ],
+    "recommended": [
+        {
+            "id": 1,
+            "name": "event-recommended-1",
+            "image": {
+                "src": "../../assets/images/evento2.png",
+                "alt": "Evento 2"
+            },
+            "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "14/01/2024",
+            "startAt": "14:00",
+            "endAt": "16:00",
+            "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+            "favorite": true,
+            "href": "/events/1"
+        },
+        {
+            "id": 2,
+            "name": "event-recommended-2",
+            "image": {
+                "src": "../../assets/images/evento1.png",
+                "alt": "Evento 1"
+            },
+            "title": "Conferenza Alumni Un nuovo modo di approcciarsi alla user Research",
+            "platform": "Zoom",
+            "tags": [
+                "Evento online",
+                "Solo per Alumni/e"
+            ],
+            "date": "14/01/2024",
+            "startAt": "14:00",
+            "endAt": "16:00",
+            "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+            "favorite": false,
+            "href": "/events/2"
+        },
+        {
+            "id": 3,
+            "name": "event-recommended-3",
+            "image": {
+                "src": "../../assets/images/evento1.png",
+                "alt": "Evento 3"
+            },
+            "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "14/01/2024",
+            "startAt": "14:00",
+            "endAt": "16:00",
+            "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform.",
+            "favorite": true,
+            "href": "/events/3"
+        }
+    ],
+    "all": [
+        {
+            "id": 1,
+            "name": "event-all-1",
+            "image": {
+                "src": "../../assets/images/evento1.png",
+                "alt": "Evento 1"
+            },
+            "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "14/01/2024",
+            "startAt": "14:00",
+            "endAt": "16:00",
+            "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+            "favorite": true,
+            "href": "/events/1"
+        },
+        {
+            "id": 2,
+            "name": "event-all-2",
+            "image": {
+                "src": "../../assets/images/evento2.png",
+                "alt": "Evento 2"
+            },
+            "title": "Conferenza Alumni Un nuovo modo di approcciarsi alla user Research",
+            "platform": "Zoom",
+            "tags": [
+                "Evento online",
+                "Solo per Alumni/e"
+            ],
+            "date": "17/01/2024",
+            "startAt": "17:00",
+            "endAt": "18:00",
+            "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+            "favorite": false,
+            "href": "/events/2"
+        },
+        {
+            "id": 3,
+            "name": "event-all-3",
+            "image": {
+                "src": "../../assets/images/evento3.png",
+                "alt": "Evento 3"
+            },
+            "title": "In una terra lontana, dietro le montagne Parole, lontani dalle terre di Vocalia e Consonantia",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "21/01/2024",
+            "startAt": "10:00",
+            "endAt": "11:00",
+            "description": "Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental",
+            "favorite": false,
+            "href": "/events/3"
+        },
+        {
+            "id": 4,
+            "name": "event-all-4",
+            "image": {
+                "src": "../../assets/images/evento4.png",
+                "alt": "Evento 4"
+            },
+            "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "24/01/2024",
+            "startAt": "11:00",
+            "endAt": "12:00",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+            "favorite": false,
+            "href": "/events/4"
+        },
+        {
+            "id": 5,
+            "name": "event-all-5",
+            "image": {
+                "src": "../../assets/images/evento5.png",
+                "alt": "Evento 5"
+            },
+            "title": "Lorem ipsum",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "26/01/2024",
+            "startAt": "15:00",
+            "endAt": "17:00",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+            "favorite": true,
+            "href": "/events/5"
+        },
+        {
+            "id": 6,
+            "name": "event-all-6",
+            "image": {
+                "src": "../../assets/images/evento6.png",
+                "alt": "Evento 6"
+            },
+            "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "27/01/2024",
+            "startAt": "15:00",
+            "endAt": "17:00",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+            "favorite": true,
+            "href": "/events/6"
+        }
+    ]
+}

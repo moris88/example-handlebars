@@ -1,0 +1,8 @@
+/*PAGE404 CSS*/
+.page404-container {
+    @apply flex flex-col items-center justify-center h-screen;
+}
+
+.page404-text {
+    @apply text-4xl;
+}

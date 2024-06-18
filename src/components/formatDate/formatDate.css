@@ -1,0 +1,12 @@
+/*FORMATDATE CSS*/
+.monthContainer {
+    @apply text-sm text-primary font-bold;
+}
+
+.dayContainer {
+    @apply text-4xl text-black font-bold;
+}
+
+.hourContainer {
+    @apply text-2xl text-black font-bold;
+}

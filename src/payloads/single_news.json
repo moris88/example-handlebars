@@ -1,0 +1,106 @@
+{
+    "id": 1,
+    "name": "news-evidence-1",
+    "image": {
+        "src": "../../assets/images/news1.png",
+        "alt": "News 1"
+    },
+    "title": "Perchè formarsi con un corso di Intelligenza Artificiale?",
+    "description": "Frequentare un corso di Intelligenza Artificiare non è solo un'opportunità per acquisire conoscenze teoriche, ma fornisce anche una solida base pratica che può essere applicata direttamente nel contesto aziendale e nel business di tutti i giorni. Ecco come il Master in Artificial Intelligence for Business può avere un impatto tangibile sulle attività aziendali.",
+    "tags": [
+        "News",
+        "Business Innovation"
+    ],
+    "createdAt": "22/03/2024",
+    "editedAt": "22/03/2024",
+    "favorite": true,
+    "author": {
+        "image": {
+            "src": "../../assets/images/author1.png",
+            "alt": "News 1"
+        },
+        "name": "Giuseppe Bianchini",
+        "role": "Innovation Manager"
+    },
+    "contents": [
+        {
+            "id": 1,
+            "title": "Ottimizzazione dei processi aziendali",
+            "description": "Imparare le tecniche e gli strumenti dell'IA consente di identificare e automatizzare i processi ripetitivi e ridondanti all'interno dell'azienda.Ciò porta a un aumento dell'efficienza operativa, a una riduzione dei costi e a una maggiore produttività complessiva. Ad esempio, l'automazione dei processi di gestione del magazzino o dei servizi clienti può liberare risorse umane preziose che possono essere impiegate in attività ad alto valore aggiunto."
+        },
+        {
+            "id": 2,
+            "title": "Miglioramento delle decisioni",
+            "description": "L'utilizzo dell'IA per l'analisi dei dati consente alle aziende di prendere decisioni più informate e basate su evidenze.Attraverso la raccolta e l'analisi di grandi volumi di dati, è possibile identificare tendenze, modelli e correlazioni che altrimenti potrebbero passare inosservati. Ciò permette di ottimizzare le strategie di marketing, di prevedere le tendenze del mercato e di individuare opportunità di crescita. Inoltre, l'IA può essere impiegata per sviluppare modelli di previsione accurati che supportano la pianificazione strategica e tattica dell'azienda."
+        },
+        {
+            "id": 3,
+            "title": "Personalizzazione dell’esperienza cliente",
+            "description": "L'IA può essere utilizzata per personalizzare e migliorare l'esperienza del cliente. Attraverso l'analisi dei dati dei clienti, è possibile identificare i loro gusti, preferenze e comportamenti individuali, consentendo alle aziende di offrire prodotti e servizi su misura.Ad esempio, i sistemi di raccomandazione basati sull'IA possono suggerire prodotti o contenuti rilevanti per ciascun cliente, migliorando così la soddisfazione del cliente e la fidelizzazione."
+        },
+        {
+            "id": 4,
+            "title": "Innovazione e sviluppo di nuovi prodotti",
+            "description": "L'IA può essere un motore di innovazione per le aziende, aiutandole a sviluppare nuovi prodotti e servizi che rispondono alle esigenze emergenti del mercato.Attraverso l'analisi dei dati e la generazione di insight, è possibile identificare nuove opportunità di mercato, individuare gap nel portafoglio prodotti e anticipare le tendenze del settore. Inoltre, l'IA può essere impiegata per ottimizzare il processo di progettazione e sviluppo dei prodotti, riducendo i tempi di sviluppo e migliorando la qualità finale del prodotto. Il corso Artificial Intelligence for Business di Talent Garden fornisce competenze pratiche e strumenti che possono essere direttamente applicati nell'ambiente aziendale per migliorare l'efficienza operativa, ottimizzare le decisioni aziendali, personalizzare l'esperienza del cliente e stimolare l'innovazione.Investire nella formazione sull'IA non solo prepara le persone per il futuro, ma offre anche vantaggi tangibili per le aziende nel presente."
+        }
+    ],
+    "recommended": [
+        {
+            "id": 1,
+            "name": "news-evidence-1",
+            "image": {
+                "src": "../../assets/images/news1.png",
+                "alt": "News 1"
+            },
+            "title": "Alumni Spotlight:Successi e Storie Ispiratrici",
+            "tags": [
+                "News"
+            ],
+            "date": "03/04/2024",
+            "time": "11:32",
+            "lecture_time": "13 min di lettura",
+            "author": "Chiara Rossi",
+            "description": "In questa edizione speciale, mettiamo in luce alcuni dei nostri brillanti Alumni e Alumnae che stanno facendo grandi cose nel loro campo. Dalle imprese imprenditoriali alle carriere accademiche, queste storie sono fonte di ispirazione per tutti noi. Leggi le loro esperienze, scopri i loro successi e lasciati motivare dalle loro conquiste straordinarie.Clicca qui per leggere di più e lasciati ispirare dalle storie dei nostri Alumni e Alumnae di spicco!",
+            "favorite": true,
+            "href": "/news/1"
+        },
+        {
+            "id": 2,
+            "name": "news-evidence-2",
+            "image": {
+                "src": "../../assets/images/news2.png",
+                "alt": "News 2"
+            },
+            "title": "Guida al Prestito per Merito: cos’è e come funziona",
+            "tags": [
+                "News studenti"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Di Mario Rossi",
+            "description": "Per Prestito per Merito si intende un finanziamento caratterizzato da favorevoli condizioni di rimborso e da un accesso semplificato al capitale. È detto così perché viene erogato sulla base di un impegno morale: portare a termine un determinato progetto.",
+            "favorite": false,
+            "href": "/news/2"
+        },
+        {
+            "id": 3,
+            "name": "news-evidence-3",
+            "image": {
+                "src": "../../assets/images/news3.png",
+                "alt": "News 3"
+            },
+            "title": "Perchè formarsi con un corso di Intelligenza Artificiale?",
+            "tags": [
+                "Business Innovation"
+            ],
+            "date": "14/01/2024",
+            "time": "14:00",
+            "lecture_time": "4 min di lettura",
+            "author": "Chiara Rossi",
+            "description": "Frequentare un corso di Intelligenza Artificiare non è solo un'opportunità per acquisire conoscenze teoriche, ma fornisce anche una solida base pratica che può essere applicata direttamente nel contesto aziendale e nel business di tutti i giorni.",
+            "favorite": false,
+            "href": "/news/3"
+        }
+    ]
+}

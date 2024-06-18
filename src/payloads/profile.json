@@ -1,0 +1,292 @@
+{
+    "image": {
+        "src": "../../assets/images/avatar1.png",
+        "alt": "Avatar1"
+    },
+    "name": "Chiara Rossi",
+    "role": "Mentor",
+    "phone": "+39 123 456 7890",
+    "email": "chiara.rossi@gmail.com",
+    "address": {
+        "street": "Via Roma 1",
+        "city": "Trento",
+        "zip": "38122",
+        "country": "Italia"
+    },
+    "info": {
+        "department": "Giurisprudenza",
+        "graduated": "Laurea magistrale biennale",
+        "startDateYear": "2019",
+        "endDateYear": "2023",
+        "university": "Università degli Studi di Trento"
+    },
+    "work": {
+        "company": "Studio Legale Rossi",
+        "role": "Avvocato",
+        "startDateYear": "2023",
+        "endDateYear": "Presente",
+        "experience": "1 anno"
+    },
+    "description": "Laureato in Giurisprudenza con passione per il diritto e la ricerca della giustizia. Esperto nella comprensione e nell'applicazione delle leggi, ho acquisito competenze analitiche e problem-solving durante il percorso accademico. La mia formazione giuridica mi ha permesso di sviluppare una solida capacità di analisi critica e di formulare argomentazioni chiare e persuasive.",
+    "formations": [
+        {
+            "logo": {
+                "src": "../../assets/images/logo.png",
+                "alt": "Università degli Studi di Trento"
+            },
+            "name": "Università degli studi di Trento",
+            "title": "Master di III livello in Giurista d’Impresa ",
+            "startDateYear": "2014",
+            "endDateYear": "2016"
+        },
+        {
+            "logo": {
+                "src": "../../assets/images/logo.png",
+                "alt": "Università degli Studi di Trento"
+            },
+            "name": "Università degli studi di Trento",
+            "title": "Laurea magistrale a ciclo unico in Giurisprudenza",
+            "startDateYear": "2009",
+            "endDateYear": "2014"
+        }
+    ],
+    "experiences": [
+        {
+            "logo": {
+                "src": "../../assets/images/avvocato.png",
+                "alt": "Studio Legale Rossi"
+            },
+            "name": "Studio Legale Trento",
+            "role": "Avvocato Penalista",
+            "startDateMonth": "Luglio",
+            "startDateYear": "2019",
+            "experience": "6 anni 5 mesi",
+            "description": "Ho lavorato su questioni legali complesse, fornendo consulenza strategica e supporto a clienti e aziende. La mia approfondita conoscenza del diritto è complementata da un approccio pratico e orientato alla soluzione."
+        },
+        {
+            "logo": {
+                "src": "../../assets/images/praticante.png",
+                "alt": "Studio Legale Bianchi"
+            },
+            "name": "Studio Legale Trento",
+            "role": "Praticante avvocato",
+            "startDateMonth": "Luglio",
+            "startDateYear": "2018",
+            "experience": "1 anno 2 mesi",
+            "description": "Ho svolto ricerche approfondite su questioni giuridiche complesse, fornendo supporto critico per la preparazione di casi e consulenze legali. La mia capacità di analisi dettagliata è stata messa alla prova nella revisione e nell'analisi di documenti legali fondamentali."
+        }
+    ],
+    "events": {
+        "my": [
+            {
+                "id": 1,
+                "name": "event-all-1",
+                "image": {
+                    "src": "../../assets/images/evento1.png",
+                    "alt": "Evento 1"
+                },
+                "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento in presenza",
+                    "Aperto a tutti/e"
+                ],
+                "date": "14/01/2024",
+                "startAt": "14:00",
+                "endAt": "16:00",
+                "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+                "favorite": true,
+                "href": "/events/1"
+            },
+            {
+                "id": 5,
+                "name": "event-all-5",
+                "image": {
+                    "src": "../../assets/images/evento5.png",
+                    "alt": "Evento 5"
+                },
+                "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento in presenza",
+                    "Aperto a tutti/e"
+                ],
+                "date": "26/01/2024",
+                "startAt": "15:00",
+                "endAt": "17:00",
+                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+                "favorite": true,
+                "href": "/events/5"
+            },
+            {
+                "id": 6,
+                "name": "event-all-6",
+                "image": {
+                    "src": "../../assets/images/evento6.png",
+                    "alt": "Evento 6"
+                },
+                "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento in presenza",
+                    "Aperto a tutti/e"
+                ],
+                "date": "27/01/2024",
+                "startAt": "15:00",
+                "endAt": "17:00",
+                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+                "favorite": true,
+                "href": "/events/6"
+            }
+        ],
+        "subscribed": [
+            {
+                "id": 1,
+                "name": "event-my-1",
+                "image": {
+                    "src": "../../assets/images/evento1.png",
+                    "alt": "Evento 1"
+                },
+                "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento in presenza",
+                    "Aperto a tutti/e"
+                ],
+                "date": "14/01/2024",
+                "startAt": "14:00",
+                "endAt": "16:00",
+                "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+                "favorite": true,
+                "subscribed": true,
+                "link": "https://meet.google.com/",
+                "href": "/events/1"
+            },
+            {
+                "id": 2,
+                "name": "event-my-2",
+                "image": {
+                    "src": "../../assets/images/evento2.png",
+                    "alt": "Evento 2"
+                },
+                "title": "Conferenza Alumni Un nuovo modo di approcciarsi alla user Research",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento online",
+                    "Solo per Alumni/e"
+                ],
+                "date": "14/01/2024",
+                "startAt": "14:00",
+                "endAt": "16:00",
+                "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+                "favorite": true,
+                "subscribed": true,
+                "link": "https://meet.google.com/",
+                "href": "/events/2"
+            },
+            {
+                "id": 3,
+                "name": "event-my-3",
+                "image": {
+                    "src": "../../assets/images/evento1.png",
+                    "alt": "Evento 1"
+                },
+                "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento in presenza",
+                    "Aperto a tutti/e"
+                ],
+                "date": "14/01/2024",
+                "startAt": "14:00",
+                "endAt": "16:00",
+                "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform.",
+                "favorite": true,
+                "subscribed": true,
+                "link": "https://meet.google.com/",
+                "href": "/events/3"
+            }
+        ]
+    },
+    "news": {
+        "my": [
+            {
+                "id": 1,
+                "name": "news-evidence-1",
+                "image": {
+                    "src": "../../assets/images/news1.png",
+                    "alt": "News 1"
+                },
+                "title": "Alumni Spotlight:Successi e Storie Ispiratrici",
+                "tags": [
+                    "News"
+                ],
+                "date": "03/04/2024",
+                "time": "11:32",
+                "lecture_time": "13 min di lettura",
+                "author": "Chiara Rossi",
+                "description": "In questa edizione speciale, mettiamo in luce alcuni dei nostri brillanti Alumni e Alumnae che stanno facendo grandi cose nel loro campo. Dalle imprese imprenditoriali alle carriere accademiche, queste storie sono fonte di ispirazione per tutti noi. Leggi le loro esperienze, scopri i loro successi e lasciati motivare dalle loro conquiste straordinarie.Clicca qui per leggere di più e lasciati ispirare dalle storie dei nostri Alumni e Alumnae di spicco!",
+                "favorite": true,
+                "href": "/news/1"
+            },
+            {
+                "id": 2,
+                "name": "news-evidence-2",
+                "image": {
+                    "src": "../../assets/images/news2.png",
+                    "alt": "News 2"
+                },
+                "title": "Guida al Prestito per Merito: cos’è e come funziona",
+                "tags": [
+                    "News studenti"
+                ],
+                "date": "14/01/2024",
+                "time": "14:00",
+                "lecture_time": "4 min di lettura",
+                "author": "Di Mario Rossi",
+                "description": "Per Prestito per Merito si intende un finanziamento caratterizzato da favorevoli condizioni di rimborso e da un accesso semplificato al capitale. È detto così perché viene erogato sulla base di un impegno morale: portare a termine un determinato progetto.",
+                "favorite": true,
+                "href": "/news/2"
+            },
+            {
+                "id": 3,
+                "name": "news-evidence-3",
+                "image": {
+                    "src": "../../assets/images/news3.png",
+                    "alt": "News 3"
+                },
+                "title": "Perchè formarsi con un corso di Intelligenza Artificiale?",
+                "tags": [
+                    "Business Innovation"
+                ],
+                "date": "14/01/2024",
+                "time": "14:00",
+                "lecture_time": "4 min di lettura",
+                "author": "Chiara Rossi",
+                "description": "Frequentare un corso di Intelligenza Artificiare non è solo un'opportunità per acquisire conoscenze teoriche, ma fornisce anche una solida base pratica che può essere applicata direttamente nel contesto aziendale e nel business di tutti i giorni.",
+                "favorite": true,
+                "href": "/news/3"
+            }
+        ]
+    },
+    "links": {
+        "linkedin": "https://www.linkedin.com"
+    },
+    "filters": {
+        "interests": {
+            "name": "Interests",
+            "options": [
+                "Tecnologia",
+                "Arte",
+                "Design",
+                "Attualità politica",
+                "Diritto civile",
+                "Innovazione in campo medico",
+                "Sociologia",
+                "Informatica",
+                "Astrofisica",
+                "Animali"
+            ] 
+        }
+    }
+}

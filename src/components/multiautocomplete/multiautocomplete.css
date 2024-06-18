@@ -1,0 +1,16 @@
+/*MULTIAUTOCOMPLETE CSS*/
+.multiautocomplete-content {
+  @apply transition-all duration-100 bg-white absolute top-20 left-0 w-full rounded-lg shadow-lg !text-black flex flex-col gap-2 p-2 max-h-52 overflow-y-auto;
+}
+
+.multiautocomplete-content.show {
+  @apply opacity-100 h-auto z-[40];
+}
+
+.multiautocomplete-content.noshow {
+  @apply opacity-0 h-0 -z-[40];
+}
+
+.multiautocomplete-element {
+  @apply hover:bg-red-100 flex w-full gap-1 rounded-lg p-1 cursor-pointer select-none;
+}

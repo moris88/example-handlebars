@@ -1,0 +1,217 @@
+{
+    "filters": {
+        "Name": {
+            "name": "Name",
+            "options": [
+                "CFO and Accounting",
+                "Governance",
+                "Healhcare",
+                "Digital Innovation",
+                "Legal"
+            ]
+        },
+        "Interests": {
+            "name": "Interests",
+            "options": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ]
+        },
+        "Location": {
+            "name": "Location",
+            "options": [
+                "Roma, (RM)",
+                "Roma Trastevere, (RM)",
+                "Roma Tiburtina, (RM)",
+                "Roma Termini, (RM)",
+                "Roma Ostiense, (RM)",
+                "Rocca di Papa, (RM)",
+                "Rocca Priora, (RM)",
+                "Rimini, (RN)"
+            ]
+        }
+    },
+    "all": [
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "CFO and Accounting",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 45
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Governance",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 88
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Healhcare",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 21
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Digital Innovation",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 45
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Legal",
+            "subtitle": "Sottotitolo",
+            "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 88
+        }
+    ],
+    "recommended": [
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Energy and Utilities",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 45
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Fashion Luxury design",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 45
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "People and Organization",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "non partecipante",
+            "subscribers": 45
+        }
+    ],
+    "my": [
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Energy and Utilities",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "in attesa",
+            "subscribers": 45
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "Fashion Luxury design",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "partecipante",
+            "subscribers": 45
+        },
+        {
+            "image": {
+                "src": "../../assets/images/group.png",
+                "alt": "Group"
+            },
+            "title": "People and Organization",
+            "subtitle": "Sottotitolo",
+            "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+            "tags": [
+                "Magistratura",
+                "Diritto",
+                "Interessi"
+            ],
+            "subscriber": "partecipante",
+            "subscribers": 45
+        }
+    ]
+}

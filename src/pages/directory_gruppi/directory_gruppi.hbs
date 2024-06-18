@@ -1,0 +1,121 @@
+{{#extend "index"}}
+{{#content "body"}}
+<!-- PAGE DIRECTORY_GRUPPI HTML -->
+<div class="relative">
+    {{> navbarComponent }}
+
+    <div class="lg:px-20 px-2">
+        <section class="flex flex-col justify-center items-center gap-6 py-20">
+            <!-- il valore 35 deve essere la somma dei notables  -->
+            <p class="inline-block text-secondary bg-red-200 border border-primary rounded-full px-6 py-3">
+                Più di 88 Gruppi di Alumni nel mondo</p>
+            <p class="text-center font-bold text-4xl loading-10">Gruppi di Alumni</p>
+            <p class="text-center font-normal text-2xl text-wrap inline lg:w-6/12 w-full">Unisciti ai gruppi di Alumni
+                per accedere a contenuti personalizzati e connetterti con colleghi affini in tutto il mondo.</p>
+        </section>
+
+        <section class="flex flex-col gap-6">
+            <div class="flex justify-between items-center border-b border-b-black">
+                <span class="text-4xl font-bold py-3">
+                    Tutti i gruppi
+                </span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 items-center">
+                <div class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" type="search" name=filters.Name.name placeholder="Cerca gruppo"
+                    items=filters.Name.options }}
+                </div>
+                <div class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" name=filters.Interests.name placeholder="Area tematica"
+                    items=filters.Interests.options }}
+                </div>
+                <div class="w-full">
+                    {{> multiautocompleteComponent className="multiautocomplete-style" classNameElement="multiautocomplete-element" type="search" name=filters.Location.name placeholder="Area geografica"
+                    items=filters.Location.options}}
+                </div>
+            </div>
+            <div class="flex items-center gap-4 flex-wrap">
+                <p><span class="text-primary">24</span> risultati</p>
+                <ul class="flex gap-2" id="list-filters">
+
+                </ul>
+                {{> buttonComponent anchor="true" href="/directory/gruppi" className="btn btn-secondary" text="Reset filtri"}}
+            </div>
+            <div class="py-6 flex flex-col gap-10">
+                {{#each all as |element|}}
+                {{> cardGruppoComponent image=element.image title=element.title subtitle=element.subtitle
+                tags=element.tags description=element.description subscribers=element.subscribers
+                subscriber=element.subscriber onclick=element onclickPartecipa="partecipa(event)"}}
+                {{/each}}
+            </div>
+            <div class="flex items-center justify-center">
+                <div class="flex items-center justify-between" <!-- button pagina precedente -->
+                    <button disabled class="text-primary disabled:text-gray-300" type="button">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                        </svg>
+                    </button>
+                    <p class="block font-sans text-base antialiased font-normal leading-relaxed">
+                        <!-- corrente/totale pagine -->
+                        <strong class="text-primary whitespace-nowrap">1/10</strong>
+                    </p>
+                    <!-- button pagina successiva -->
+                    <button class="text-primary disabled:text-gray-300" type="button">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center border-b border-b-black mt-12">
+                <span class="text-4xl font-bold py-3">
+                    Gruppi consigliati per te
+                </span>
+            </div>
+            <div class="py-6 flex flex-col gap-10">
+                {{#each recommended as |element|}}
+                {{> cardGruppoComponent image=element.image title=element.title subtitle=element.subtitle
+                tags=element.tags description=element.description subscribers=element.subscribers
+                subscriber=element.subscriber}}
+                {{/each}}
+            </div>
+            <div class="flex justify-between items-center border-b border-b-black mt-12">
+                <span class="text-4xl font-bold py-3">
+                    I tuoi gruppi
+                </span>
+                <span class="flex gap-2 items-center h-full">
+                    <span id="prev-pagination-my" onclick="prevMy(event)">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' />
+                        </svg>
+                    </span>
+                    <input id="pagination-my" value="1" type="text" class="hidden" />
+                    <span id="next-pagination-my" onclick="nextMy(event)">
+                        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
+                            stroke='currentColor' class='w-6 h-6 text-primary cursor-pointer'>
+                            <path stroke-linecap='round' stroke-linejoin='round' d='m8.25 4.5 7.5 7.5-7.5 7.5' />
+                        </svg>
+                    </span>
+                    <span>
+                        {{> buttonComponent type="secondary" className="btn btn-secondary" text="vedi
+                        tutti" href="/directory/gruppi/all/my" anchor="true" }}
+                    </span>
+                </span>
+            </div>
+            <div class="py-6 flex flex-col gap-10">
+                {{#each my as |element|}}
+                {{> cardGruppoComponent image=element.image title=element.title subtitle=element.subtitle
+                tags=element.tags description=element.description subscribers=element.subscribers
+                subscriber=element.subscriber}}
+                {{/each}}
+            </div>
+        </section>
+    </div>
+</div>
+
+<script />
+{{/content}}
+{{/extend}}

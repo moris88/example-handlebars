@@ -1,0 +1,8 @@
+/*DIRECTORY_GRUPPI CSS*/
+.multiautocomplete-style {
+    @apply rounded-full bg-white px-3 py-4 relative w-auto border hover:border-primary outline-1 outline-primary border-solid border-gray-300;
+}
+
+.multiautocomplete-element {
+    @apply flex gap-2 items-center bg-white border rounded-[4px] p-2 cursor-pointer hover:border-black;
+}

@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <title>Unitrento</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+
+
+<!-- PAGE LOGIN HTML -->
+<div class="relative">
+    <!-- COMPONENT NAVBAR HTML -->
+    <!-- PER NON SOVRAPPORRE LE NAVBAR DI DRUPAL E DEL SITO METTI TOP-10, --->
+    <!-- OPPURE TOP-12 IN SU, IN BASE ALLA DIMENSIONE DELLA NAVBAR SE SEI --->
+    <!-- IN ADMIN ALL'INTERNO DI DRUPAL --->
+    <!-- ESEMPIO: <header class="navbar top-10"> --->
+    <header class="navbar top-0">
+      <div class="w-full flex justify-between items-center gap-4">
+        <a href="/" class="img-nav"><img src=../../assets/images/logo.png alt=Logo class="img-nav" /></a>
+        <nav class="hidden xl:flex whitespace-nowrap flex-nowrap">
+          <ul class="items-nav">
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/chi-siamo">Chi siamo</a>
+                </li>
+              <li 
+                class="item-nav" 
+              >
+                <button class="dropdown-navbar-btn">       
+                  Directory
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down dropdown-navbar-icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                  </svg>
+                </button>
+                <ul class="dropdown-navbar-content">
+                    <li><a class="dropdown-navbar-element" href="/directory/alumni">Alumni</a></li>
+                    <li><a class="dropdown-navbar-element" href="/directory/gruppi">Gruppi</a></li>
+                    <li><a class="dropdown-navbar-element" href="/directory/notables">Notables</a></li>
+                </ul>
+              </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/mentoring-program">Mentoring Program</a>
+                </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/news">News</a>
+                </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/events">Eventi</a>
+                </li>
+                <li  class="item-nav" >
+                <a class="text-nowrap" href="/bandi-e-premi">Bandi e Premi</a>
+                </li>
+            <li class="ml-2">
+              <!-- COMPONENT BUTTON HTML -->
+                <a class="btn btn-secondary" href="/dona">
+                  Dona
+                </a>
+              
+            </li>
+          </ul>
+        </nav>
+        <section>
+          <!-- COMPONENT BUTTON HTML -->
+            <a class="btn btn-primary" href="/login">
+              Accedi ora
+            </a>
+          
+        </section>
+      </div>
+    
+      <section class="text-[10px] xl:hidden">
+        <nav class="w-full">
+          <ul class="items-nav">
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/chi-siamo">Chi siamo</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/directory/alumni">Alumni</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/directory/gruppi">Gruppi</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/directory/notables">Notables</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/mentoring-program">Mentoring Program</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/news">News</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/events">Eventi</a>
+            </li>
+            <li  class="item-nav" >
+              <a class="text-nowrap" href="/bandi-e-premi">Bandi e Premi</a>
+            </li>
+            <li>
+              <!-- COMPONENT BUTTON HTML -->
+                <a class="btn btn-secondary" href="/dona">
+                  Dona
+                </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    
+    
+    <script>document.addEventListener("DOMContentLoaded",function(){function r(o){var s;o.preventDefault(),o.stopPropagation();const{type:t}=o,n=this.parentElement,c=!((s=n.querySelector(".dropdown-navbar-content"))!=null&&s.classList);c&&t!=="mouseover"?(n.querySelector(".dropdown-navbar-subcontent").classList.toggle("show"),document.querySelectorAll(".dropdown-navbar-subcontent.show").forEach(function(e){e!==n.querySelector(".dropdown-navbar-subcontent")&&e.classList.remove("show")})):c||(n.querySelector(".dropdown-navbar-content").classList.toggle("show"),n.querySelector(".dropdown-navbar-icon").classList.toggle("turntop"),document.querySelectorAll(".dropdown-navbar-content.show").forEach(function(e){e!==n.querySelector(".dropdown-navbar-content")&&e.classList.remove("show")}))}document.querySelectorAll(".dropdown-navbar-btn").forEach(function(o){o.addEventListener("click",r),o.addEventListener("mouseover",r)}),window.addEventListener("click",function(o){o.target.closest(".dropdown-navbar")||(document.querySelectorAll(".dropdown-navbar-content.show").forEach(function(t){t.classList.toggle("show")}),document.querySelectorAll(".dropdown-navbar-icon.turntop").forEach(function(t){t.classList.toggle("turntop")}),document.querySelectorAll(".dropdown-navbar-subcontent.show").forEach(function(t){t.classList.toggle("show")}))})});
+    </script>
+    <div class="h-[88vh] w-full flex justify-between p-">
+        <section class="flex flex-col w-full lg:w-1/2 items-center justify-center">
+            <div class="flex justify-center items-center w-full">
+                <form class="flex flex-col items-start justify-start gap-2 md:p-20 p-2" id="form-login">
+                    <img src="../../assets/images/logo.png" class="w-[444px] h-auto"/>
+                    <h3 class="text-[32px] font-semibold mt-20">Accedi</h3>
+                    <p class="mt-2 text-base">Accedi alla tua area personale Alumno/a</p>
+                    <!-- COMPONENT INPUT HTML -->
+                    <input
+                      id="email"
+                      name=""
+                      type="email"
+                      class="rounded-lg border border-solid border-gray-300 text-black px-4 py-3 mt-6 outline-none w-full"
+                      placeholder="Inserisci Email"
+                      required="true"
+                    />
+                    
+                    <!-- COMPONENT INPUT HTML -->
+                    <input
+                      id="password"
+                      name=""
+                      type="password"
+                      class="rounded-lg border border-solid border-gray-300 text-black px-4 py-3 mt-4 outline-none w-full"
+                      placeholder="Inserisci Password"
+                      required="true"
+                    />
+                    
+                    <p class="w-full flex justify-end text-secondary mt-2 mb-10 text-sm"><a class="inline" href="#">Password dimenticata?</a></p>
+                    <button class="w-full flex justify-center items-center gap-5 rounded whitespace-nowrap bg-blue-600 px-2 py-2 text-white font-bold" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                        Entra con SPID
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="h-full w-1/2 object-cover lg:block hidden p-4">
+            <img src="../../assets/images/login-image.png" class="h-full w-full rounded-lg" />
+        </section>
+    </div>
+</div>
+
+
+<script>var s=(n,l,e)=>new Promise((o,r)=>{var c=t=>{try{a(e.next(t))}catch(i){r(i)}},d=t=>{try{a(e.throw(t))}catch(i){r(i)}},a=t=>t.done?o(t.value):Promise.resolve(t.value).then(c,d);a((e=e.apply(n,l)).next())});const form=document.getElementById("form-login");function handleForm(n){n.preventDefault();const l=document.getElementById("email").value,e=document.getElementById("password").value;login(l,e)}form.addEventListener("submit",handleForm);function login(n,l){return s(this,null,function*(){if(localStorage.getItem("token")){window.location.href="/";return}yield fetch("http://localhost:3001/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:n,password:l})}).then(o=>o.json()).then(o=>{o.message==="SUCCESS"?(localStorage.setItem("token","token"),window.location.href="/"):window.alert(o.error||"Errore durante il login!!!")})})}
+</script>
+
+  </body>
+</html>

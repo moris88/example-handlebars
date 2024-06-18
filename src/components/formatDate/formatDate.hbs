@@ -1,0 +1,11 @@
+<!-- COMPONENT FORMATDATE HTML -->
+{{#if hour}}
+  <div class="flex flex-col gap-2">
+    {{#format}}{{date}}{{/format}}
+    <span class="hourContainer">11:30</span>
+  </div>
+{{else}}
+  {{#format}}{{date}}{{/format}}
+{{/if}}
+
+<script />

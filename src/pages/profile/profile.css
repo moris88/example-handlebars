@@ -1,0 +1,24 @@
+/*PROFILE CSS*/
+/* Stile base per il dropdown */
+.dropdown {
+  @apply relative;
+}
+
+/* Stile per il pulsante del dropdown */
+.dropdown-btn {
+  @apply cursor-pointer py-4 w-full flex justify-between items-center gap-4 border-b;
+}
+
+/* Stile per il contenitore del dropdown */
+.dropdown-content {
+  @apply hidden;
+}
+
+/* Mostra il dropdown quando la classe 'show' è aggiunta */
+.dropdown-content.show {
+  @apply flex justify-start items-center gap-16 overflow-y-auto pt-4 w-auto;
+}
+
+.dropdown-icon {
+    @apply w-4 h-4 text-primary drop-shadow-lg;
+}

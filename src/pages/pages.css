@@ -1,0 +1,20 @@
+/*PAGES CSS*/
+
+@import "./home/home.css";
+@import "./home_no_login/home_no_login.css";
+@import "./login/login.css";
+@import "./event/event.css";
+@import "./events/events.css";
+@import "./single_news/single_news.css";
+@import "./news/news.css";
+@import "./profile/profile.css";
+@import "./profile_events/profile_events.css";
+@import "./profile_events_save/profile_events_save.css";
+@import "./directory_alumni/directory_alumni.css";
+@import "./directory_gruppi/directory_gruppi.css";
+@import "./directory_gruppi_my/directory_gruppi_my.css";
+@import "./directory_notables/directory_notables.css";
+@import "./directory_gruppo_no_partecipate/directory_gruppo_no_partecipate.css";
+@import "./directory_gruppo_loading/directory_gruppo_loading.css";
+@import "./directory_gruppo_partecipate/directory_gruppo_partecipate.css";
+@import "./page404/page404.css";

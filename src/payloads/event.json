@@ -1,0 +1,139 @@
+{
+    "id": 3,
+    "name": "event-my-3",
+    "image": {
+        "src": "../../assets/images/evento1.png",
+        "alt": "Evento 1"
+    },
+    "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+    "platform": "Zoom",
+    "tags": [
+        "Evento in presenza",
+        "Aperto a tutti/e"
+    ],
+    "date": "14/01/2024",
+    "startAt": "14: 00",
+    "endAt": "16: 00",
+    "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti. Scopriremo le frontiere della ricerca utente e i nuovi approcci per comprenderla.Attraverso sessioni interattive condotte da esperti del settore, esamineremo le ultime tendenze, strumenti e metodologie utilizzate nel campo della ricerca utente.Dalle tecniche tradizionali alle innovazioni più recenti, questa conferenza offre un'opportunità unica per riunire la nostra comunità Alumni/ae e approfondire la nostra comprensione di come i consumatori interagiscono con prodotti e servizi digitali. Entra nel dialogo, connettiti con colleghi di talento e amplia le tue conoscenze per guidare il futuro della user research.Non perdere l'opportunità di essere parte di questo evento esclusivo!",
+    "favorite": false,
+    "link": "https: //meet.google.com/",
+    "subscribed": false,
+    "href": "/events/1",
+    "speakers": [
+        {
+            "name": "Luca Rossi",
+            "role": "Speaker",
+            "course": "Art Director",
+            "image": {
+                "src": "../../assets/images/avatar2.png",
+                "alt": "Avatar2"
+            }
+        },
+        {
+            "name": "Patrizia Vinci",
+            "role": "Speaker",
+            "course": "Project Manager",
+            "image": {
+                "src": "../../assets/images/avatar3.png",
+                "alt": "Avatar3"
+            }
+        },
+        {
+            "name": "Maria Esposito",
+            "role": "Ospite",
+            "course": "User Research Designer",
+            "image": {
+                "src": "../../assets/images/avatar4.png",
+                "alt": "Avatar4"
+            }
+        }
+    ],
+    "agent_events": [
+        {
+            "start_hour": "10: 30",
+            "end_hour": "10: 45",
+            "title": "Apertura e Benvenuto",
+            "description": "Introduzione agli obiettivi dell'evento e presentazione dei relatori."
+        },
+        {
+            "start_hour": "10: 45",
+            "end_hour": "11: 30",
+            "title": "Tendenze Emergenti nella User Research",
+            "description": "Esplorazione delle ultime tendenze nel campo della user research e delle implicazioni per i professionisti."
+        },
+        {
+            "start_hour": "11: 30",
+            "end_hour": "12: 15",
+            "title": "Metodologie Innovative di User Research",
+            "description": "Approfondimento sulle metodologie più recenti utilizzate nella ricerca utente, tra cui user journey mapping, analisi comportamentale e test di usabilità remota."
+        },
+        {
+            "start_hour": "12: 15",
+            "end_hour": "13: 00",
+            "title": "Panel di Discussione: Futuro della User Research",
+            "description": "Confronto tra i relatori e possibilità per gli alumni/ae di porre domande e contribuire alla discussione sul futuro della ricerca utente."
+        }
+    ],
+    "recommended": [
+        {
+            "id": 2,
+            "name": "event-all-2",
+            "image": {
+                "src": "../../assets/images/evento2.png",
+                "alt": "Evento 2"
+            },
+            "title": "Conferenza Alumni Un nuovo modo di approcciarsi alla user Research",
+            "platform": "Zoom",
+            "tags": [
+                "Evento online",
+                "Solo per Alumni/e"
+            ],
+            "date": "17/01/2024",
+            "startAt": "17: 00",
+            "endAt": "18: 00",
+            "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+            "favorite": false,
+            "href": "/events/2"
+        },
+        {
+            "id": 4,
+            "name": "event-all-4",
+            "image": {
+                "src": "../../assets/images/evento4.png",
+                "alt": "Evento 4"
+            },
+            "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "24/01/2024",
+            "startAt": "11: 00",
+            "endAt": "12: 00",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+            "favorite": false,
+            "href": "/events/4"
+        },
+        {
+            "id": 5,
+            "name": "event-all-5",
+            "image": {
+                "src": "../../assets/images/evento5.png",
+                "alt": "Evento 5"
+            },
+            "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+            "platform": "Zoom",
+            "tags": [
+                "Evento in presenza",
+                "Aperto a tutti/e"
+            ],
+            "date": "26/01/2024",
+            "startAt": "15: 00",
+            "endAt": "17: 00",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+            "favorite": true,
+            "href": "/events/5"
+        }
+    ]
+}

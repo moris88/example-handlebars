@@ -1,0 +1,326 @@
+{
+    "image": {
+        "src": "../../assets/images/group.png",
+        "alt": "Group"
+    },
+    "title": "CFO & Accounting",
+    "subtitle": "Sottotitolo",
+    "description": "Dedicato a tutti gli Alumni laureati in Giurisprudenza che vogliono intraprendere il percorso di magistratura.",
+    "tags": [
+        "Magistratura",
+        "Diritto",
+        "Interessi"
+    ],
+    "subscriber": "in attesa",
+    "subscribers": 45,
+    "info": "Un Topic rivolto a tutti coloro che si occupano di temi di amministrazione, finanza controllo e di fiscalità, sia come liberi professionisti sia in azienda. In un ambiente caratterizzato da elevata incertezza, il ruolo del CFO assume una crescente centralità nelle decisioni strategiche di un'azienda presidiando il controllo di gestione e la gestione finanziaria di un'azienda.  Al tempo stesso, l'elevata complessità normativa e fiscale fa sorgere questioni alle quali i liberi professionisti sono chiamati a trovare risposte. L'obiettivo del Topic è dunque contribuire a definire e comprendere le nuove sfide professionali che dovranno essere affrontate nei prossimi anni: un percorso condiviso, che si basa sulle esperienze degli Alumni ed è arricchito dalle best practice. Un lavoro di squadra che porta a comprendere e ad affrontare in modo proattivo i cambiamenti di figure professionali in continua evoluzione. Se sei interessato alle attività del Topic CFO & Accounting, clicca sul pulsante SEGUI: profilati e riceverai tutte le notizie e gli eventi correlati.",
+    "events": {
+        "recommended": [
+            {
+                "id": 1,
+                "name": "event-recommended-1",
+                "image": {
+                    "src": "../../assets/images/evento2.png",
+                    "alt": "Evento 2"
+                },
+                "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento in presenza",
+                    "Aperto a tutti/e"
+                ],
+                "date": "14/01/2024",
+                "startAt": "14:00",
+                "endAt": "16:00",
+                "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+                "favorite": true,
+                "href": "/events/1"
+            },
+            {
+                "id": 2,
+                "name": "event-recommended-2",
+                "image": {
+                    "src": "../../assets/images/evento1.png",
+                    "alt": "Evento 1"
+                },
+                "title": "Conferenza Alumni Un nuovo modo di approcciarsi alla user Research",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento online",
+                    "Solo per Alumni/e"
+                ],
+                "date": "14/01/2024",
+                "startAt": "14:00",
+                "endAt": "16:00",
+                "description": "Esplorerai le ultime innovazioni nel settore del design, con relatori di spicco provenienti dall'industria e accademici di fama mondiale. Lavorerai in gruppo in modalità telematica su progetti creativi e stimolanti.",
+                "favorite": false,
+                "href": "/events/2"
+            },
+            {
+                "id": 3,
+                "name": "event-recommended-3",
+                "image": {
+                    "src": "../../assets/images/evento1.png",
+                    "alt": "Evento 1"
+                },
+                "title": "Giornata dello Sport e del Benessere con atleti agonistici",
+                "platform": "Zoom",
+                "tags": [
+                    "Evento in presenza",
+                    "Aperto a tutti/e"
+                ],
+                "date": "14/01/2024",
+                "startAt": "14:00",
+                "endAt": "16:00",
+                "description": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform.",
+                "favorite": true,
+                "href": "/events/3"
+            }
+        ]
+    },
+    "alumni": [
+        {
+            "image": {
+                "src": "../../assets/images/avatar1.png",
+                "alt": "Avatar1"
+            },
+            "name": "Chiara Rossi",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Marco Rossi",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Luca Bianchi",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Maria Esposito",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Francesca Romano",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Antonio Ricci",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "notable": true,
+            "name": "Giulia Ferrara",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "year_of_graduated": "2018",
+            "profession": "Avvocato",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Master di || livello",
+                "graduated": "Diritto legale e amministrativo",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        },
+        {
+            "image": {
+                "src": "../../assets/images/avatar.png",
+                "alt": "Avatar1"
+            },
+            "name": "Giovanni Conti",
+            "role": "Mentor",
+            "phone": "+39 123 456 7890",
+            "email": "chiara.rossi@gmail.com",
+            "address": {
+                "street": "Via Roma 1",
+                "city": "Trento",
+                "zip": "38122",
+                "country": "Italia"
+            },
+            "info": {
+                "department": "Giurisprudenza",
+                "graduated": "Laurea magistrale biennale",
+                "startDateYear": "2019",
+                "endDateYear": "2023",
+                "university": "Università degli Studi di Trento"
+            },
+            "work": {
+                "company": "Studio Legale Rossi",
+                "role": "Avvocato",
+                "startDateYear": "2023",
+                "endDateYear": "Presente",
+                "experience": "1 anno"
+            }
+        }
+    ]
+}

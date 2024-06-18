@@ -1,0 +1,150 @@
+<!-- COMPONENT CARDEVENT HTML -->
+<div id="{{name}}" class="w-full">
+    {{#if (equal size "small")}}
+    <div class="w-full flex justify-start bg-white rounded-2xl border border-gray-400 max-h-[155px] ">
+        <div class="w-auto hidden lg:flex">
+            <img src="{{image.src}}" alt="{{image.alt}}" class="h-auto min-w-[254px] max-w-[254px] rounded-2xl object-cover object-top" />
+        </div>
+        <div class="w-full flex gap-6 p-8">
+            <div class="flex-col justify-start items-start h-full">
+                {{>formatDateComponent date=date }}
+            </div>
+            <div class="flex flex-col w-full items-stretch gap-4 justify-between">
+                <div class="min-h-10 max-h-10 text-ellipsis overflow-hidden flex justify-between items-center">
+                    <p class="text-2xl font-bold">
+                        <!-- maxChar 100 -->
+                        {{truncate title 100}}
+                    </p>
+                    {{#if subscribed}}
+                    <!-- button iscrizione=true -->
+                    {{> chipComponent type="iscritto" }}
+                    {{else}}
+                    {{#if favorite}}
+                    <span class="text-base font-normal">
+                        {{#if favorite}}
+                        {{> chipSaveComponent type="save" text="Salvato"}}
+                        {{else}}
+                        {{> chipSaveComponent type="no_save" text="Salva"}}
+                        {{/if}}
+                    </span>
+                    {{/if}}
+                    {{/if}}
+                </div>
+                <div class="flex justify-start items-center gap-5 w-full flex-wrap h-1/2">
+                    {{#if subscribed}}
+                    {{> buttonComponent anchor="true" className="btn btn-secondary" text="Partecipa ora"
+                    href=link}}
+                    {{else}}
+                    {{> buttonComponent anchor="true" className="btn btn-secondary" text="Iscriviti ora"
+                    href="/participate?id=" endpoint=id}}
+                    {{/if}}
+                    {{> buttonComponent next="true" anchor="true" className="flex gap-2 items-center btn btn-primary" text="Visualizza l'evento"
+                    href=href}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    {{#if horizontal}}
+    <div class="w-full flex flex-shrink-0 justify-start bg-white rounded-2xl drop-shadow-md">
+        <div class="w-auto flex">
+            <img src="{{image.src}}" alt="{{image.alt}}" class="w-full max-w-[450px] rounded-l-2xl object-cover object-top" />
+        </div>
+        <div class="w-full flex gap-6 p-8">
+            <div class="flex-col justify-start items-start h-full">
+                {{>formatDateComponent date=date }}
+            </div>
+            <div class="flex flex-col w-full items-stretch gap-4 justify-between">
+                <div class="min-h-10 max-h-10 text-ellipsis overflow-hidden">
+                    <p class="text-2xl font-bold flex justify-between">
+                        <!-- maxChar 100 -->
+                        {{truncate title 100}}
+                        {{#if subscribed}}
+                        <!-- button iscrizione=true -->
+                        {{> chipComponent type="iscritto" }}
+                        {{else}}
+                        <span class="text-base font-normal">
+                            {{#if favorite}}
+                            {{> chipSaveComponent type="save" text="Salvato"}}
+                            {{else}}
+                            {{> chipSaveComponent type="no_save" text="Salva"}}
+                            {{/if}}
+                        </span>
+                        {{/if}}
+                    </p>
+                </div>
+                <div class="flex justify-start items-center gap-4">
+                    {{#each tags as |tag|}}
+                    {{> chipComponent type="primary" text=tag}}
+                    {{/each}}
+                </div>
+                <p class="text-md max-h-[3em] text-ellipsis overflow-hidden">{{description}}</p>
+                <div class="flex justify-start items-center gap-5 w-full flex-wrap">
+                    {{#if subscribed}}
+                    {{> buttonComponent anchor="true" className="btn btn-secondary" text="Partecipa ora"
+                    href=link}}
+                    {{else}}
+                    {{> buttonComponent anchor="true" className="btn btn-secondary" text="Iscriviti ora"
+                    href="/participate?id=" endpoint=id}}
+                    {{/if}}
+                    {{> buttonComponent next="true" anchor="true" className="flex gap-2 items-center btn btn-primary" text="Visualizza l'evento"
+                    href=href}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="w-full flex flex-col justify-start bg-white rounded-2xl drop-shadow-md">
+        <div class="relative w-auto flex">
+            <img src="{{image.src}}" alt="{{image.alt}}" class="w-full min-h-[310px] max-h-[310px] rounded-t-2xl object-cover" />
+            <span class="absolute top-6 right-6">
+                <span class="flex justify-end w-full">
+                    {{#if subscribed}}
+                    <!-- button iscrizione=true -->
+                    {{> chipComponent type="iscritto" }}
+                    {{else}}
+                    {{#if favorite}}
+                    {{> chipSaveComponent type="save" text="Salvato"}}
+                    {{else}}
+                    {{> chipSaveComponent type="no_save" text="Salva"}}
+                    {{/if}}
+                    {{/if}}
+                </span>
+            </span>
+        </div>
+        <div class="w-full flex gap-6 p-8">
+            <div class="flex-col justify-start items-start h-full">
+                {{>formatDateComponent date=date }}
+            </div>
+            <div class="flex flex-col w-full items-stretch gap-4 justify-between">
+                <div class="min-h-16 max-h-16 text-ellipsis overflow-hidden">
+                    <p class="text-2xl font-bold">
+                        <!-- maxChar 60 -->
+                        {{truncate title 60}}
+                    </p>
+                </div>
+                <div class="flex justify-start items-center gap-4">
+                    {{#each tags as |tag|}}
+                    {{> chipComponent type="primary" text=tag}}
+                    {{/each}}
+                </div>
+                <p class="text-md max-h-[3em] text-ellipsis overflow-hidden">{{description}}</p>
+                <div class="flex justify-start items-center gap-5 w-full flex-wrap">
+                    {{#if subscribed}}
+                    {{> buttonComponent anchor="true" className="btn btn-secondary" text="Partecipa ora"
+                    href=link}}
+                    {{else}}
+                    {{> buttonComponent anchor="true" className="btn btn-secondary" text="Iscriviti ora"
+                    href="/participate?id=" endpoint=id}}
+                    {{/if}}
+                    {{> buttonComponent next="true" anchor="true" className="flex gap-2 items-center btn btn-primary" text="Visualizza l'evento"
+                    href=href}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    {{/if}}
+</div>
+
+<script />

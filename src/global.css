@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+/*BODY CSS*/
+
+@import "./main/index.css";
+
+/*COMPONENTS CSS*/
+
+@import "./components/components.css";
+
+/*PAGES CSS*/
+
+@import "./pages/pages.css";
