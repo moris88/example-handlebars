@@ -7,7 +7,7 @@ try {
     const app = express()
 
     const url = 'http://localhost'
-    const port = 3001
+    const port = 3002
 
     log('--> Start Server...')
 
